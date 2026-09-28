@@ -88,11 +88,11 @@
 import React, { useState, useEffect } from "react";
 import '../estilos-css/serviciosCardSlider.css';
 
-import imgCarta1 from '../assets/imgCarta1.jpg';
-import imgCarta2 from '../assets/imgCarta2.jpg';
-import imgCarta3 from '../assets/imgCarta3.jpg';
-import imgCarta4 from '../assets/imgCarta4.jpg';
-import imgCarta5 from '../assets/imgCarta5.jpg';
+import imgCarta1 from '../assets/imgCarta1.svg';
+import imgCarta2 from '../assets/imgCarta2.svg';
+import imgCarta3 from '../assets/imgCarta3.svg';
+import imgCarta4 from '../assets/imgCarta4.svg';
+import imgCarta5 from '../assets/imgCarta5.svg';
 
 const cartas = [
     {

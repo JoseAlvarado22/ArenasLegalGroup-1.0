@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiciosCuerpo from './ServiciosCuerpo';
 import ServiciosCardSlider from './ServiciosCardSlider';
-import imagenSeccion from '../assets/nuestrosServicios.png'
+import imagenSeccion from '../assets/nuestrosServicios.svg'
 import '../estilos-css/servicios.css'
 
 function Servicios(){
