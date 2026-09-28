@@ -1,0 +1,56 @@
+.cabecera{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    /* max-width: 1280px; */
+}
+
+.contenedor-cabecera{
+    height: 40px;
+    transition: all 1s ease;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ALG{
+    height: 80%;
+    /* object-fit: cover; */
+}
+
+@media (min-width:700px){
+
+    /* .cabecera{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: white;
+    } */
+
+    .contenedor-cabecera{
+        transition: all 1s ease;
+        height: 50px;
+    }
+
+    /* .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .ALG{
+        height: 80%;
+        /* object-fit: cover; *
+    } */
+
+}

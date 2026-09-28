@@ -1,0 +1,65 @@
+.contenedor-seccion-contacto{
+    padding: 0 12px 30px 12px;
+}
+.contenedor-titulo-contacto h3{
+    margin-bottom: 5px;
+}
+
+.contenedor-texto-contacto{
+    padding-bottom: 40px;
+}
+
+.contenedor-texto-contacto h1{
+    margin-bottom: 20px;
+}
+
+.contenedor-iconos-contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contenedor-iconos-contacto p{
+    font-size: clamp(11px, 3vw, 16px);
+    transition: all 1s ease;
+}
+
+.contenedor-icono{
+    display: flex;
+    gap: 10px;
+}
+
+@media (min-width:700px){
+    .contenedor-seccion-contacto{
+        padding: 0 30px 50px 30px;
+    }
+
+    .contenedor-iconos-contacto p{
+        font-size: clamp(11px, 3vw, 20px);
+        transition: all 1s ease;
+    }
+}
+
+@media (min-width:900px){
+    .contenedor-seccion-contacto{
+        padding: 0 40px 60px 40px;
+    }
+
+    .contenedor-iconos-contacto p{
+        font-size: clamp(11px, 3vw, 20px);
+        transition: all 1s ease;
+    }
+}
+
+@media (min-width: 1024px){
+    .contenedor-seccion-contacto{
+        padding: 0 80px 60px 80px;
+    }
+}
+
+@media (min-width:1280px){
+    .contenedor-seccion-contacto{
+        padding: 0 180px 80px 180px;
+    }
+}
+

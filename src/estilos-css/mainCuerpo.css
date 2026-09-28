@@ -1,0 +1,44 @@
+/* span{
+    color: #F2B4B5;
+}
+
+h1{
+    font-family: var(--fuente-pricncipal);
+    font-weight: 600;
+    font-size: clamp(32px, 3vw, 4px);
+}
+
+p{
+    font-family: var(--fuente-secundaria);
+    text-align: justify;
+    font-size: clamp(13px, 3vw, 16px);
+} */
+
+.boton-agenda {
+    border: solid 1px white; 
+    background-color: #d5a6a776;
+    width: 60%;
+    border-radius: 2px; 
+    max-width: 300px;
+    /* min-width: 200px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+    font-size: clamp(10px, 3vw, 20px);
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 1s ease;
+}
+
+.boton-agenda:hover {
+    color: #ffffff; 
+    background-color: #00000064;
+    transform: translateY(-8px);
+}
+
+.boton-agenda:active {
+    transform: translateY(0);
+}
+

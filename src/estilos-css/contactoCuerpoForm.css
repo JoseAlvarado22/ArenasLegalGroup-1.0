@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+.page-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    transition: all 1s ease;
+}
+
+/* Form Main Wrapper */
+.form-card {
+    background-color: #e9e3e3;
+    padding: 30px 12px ;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 1s ease;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    transition: all 1s ease;
+}
+
+.form-label {
+    display: block;
+    font-size: clamp(13px, 3vw, 18px);
+    font-weight: 600;
+    color: #2b2b2b;
+    margin-bottom: 8px;
+    transition: all 1s ease;
+}
+
+.asterisk {
+    color: #d93838;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1c8c8;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #333333;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+    color: #8c8585;
+    font-size: 13.5px;
+}
+
+.form-input:focus, .form-textarea:focus {
+    border-color: #8b7070;
+    box-shadow: 0 0 0 2px rgba(139, 112, 112, 0.2);
+}
+
+.form-textarea {
+    resize: none;
+    min-height: 110px;
+}
+
+/* Terms Checkbox Section */
+.terms-section {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.terms-title {
+    font-size: 12.5px;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+    display: block;
+    transition: all 1s ease;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkbox-input {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: #333;
+}
+
+.checkbox-label {
+    font-size: 13px;
+    color: #222222;
+    line-height: 1.4;
+    user-select: none;
+}
+
+/* Submit Button with Serif Font */
+.submit-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    border: 1px solid #3d3535;
+    color: #111111;
+    font-family: 'Playfair Display', 'Bodoni Moda', Georgia, serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    border-radius: 2px;
+}
+
+.submit-btn:hover {
+    background-color: #000000;
+    /* border-color: #000; */
+    color: white;
+    transform: translateY(-8px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.arrow-icon {
+    font-size: 16px;
+    display: inline-block;
+}
+
+.error-message {
+    color: #d93838;
+    font-size: 11.5px;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Modal Overlay & Card */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    animation: fadeIn 0.25s ease-out;
+}
+
+.modal-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 300px;
+    padding: 35px 28px 35px;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: scaleUp 0.25s ease-out;
+    
+}
+
+.close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1.5px solid #888888;
+    background: transparent;
+    color: #777777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.close-btn:hover {
+    color: #000;
+    border-color: #000;
+    background-color: #f0f0f0;
+}
+
+.modal-content {
+    font-family: 'Playfair Display', 'Bodoni Moda', Georgia, serif;
+    color: #111111;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+}
+
+.modal-subtitle {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.35;
+    color: #1a1a1a;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@media (min-width: 900px){
+    .page-container {
+        max-width: 650px;
+        transition: all 1s ease;
+    }
+
+    .form-group {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        transition: all 1s ease;
+    }
+
+    .terms-section{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        transition: all 1s ease;
+    }
+
+    .submit-btn{
+         width: 90%;
+        margin: 0 auto
+    }
+
+    .form-textarea {
+        min-height: 200px;
+        transition: all 1s ease;
+    }
+}
+
+
+@media (min-width:1280px){
+    .page-container {
+        max-width: 100vw;
+        margin: 0;
+        padding-bottom: 0;
+        transition: all 1s ease;
+    }
+
+    /* Form Main Wrapper */
+    .form-card {
+        width: 100%;
+        padding: 40px 180px;
+        transition: all 1s ease;
+    }
+
+    .form-group-1{
+        display: flex;
+        gap: 30px;
+        margin-bottom: 20px;
+        transition: all 1s ease;
+    }
+
+    .form-group-2{
+        width: 50%;
+        transition: all 1s ease;
+    }
+
+    .form-group{
+        margin-left: 0;
+        transition: all 1s ease;
+    }
+
+    .terms-section{
+        margin: 0 0 30px 0 ;
+    }
+
+    .submit-btn{
+        margin: 0;
+        width: 100%;
+        transition: all 1s ease;
+    }
+
+    .form-textarea{
+        height: 90%;
+        transition: all 1s ease;
+    }
+}

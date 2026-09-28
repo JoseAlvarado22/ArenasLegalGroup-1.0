@@ -1,0 +1,331 @@
+/* .imagen-seccion-nosotros{
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: all 1s ease;
+}
+
+.contenedor-titulo-nosotros{
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+}
+
+.contenedor-titulo-nosotros h3{
+    margin-bottom: 5px;
+    padding-left: 12px;
+    transition: all 1s ease;
+}
+
+.contenedor-texto-nosotros{
+    padding: 10px 12px 30px 12px;
+}
+
+
+.contenedor-texto-nosotros h1{
+    font-family: var(--fuente-pricncipal);
+    font-size: clamp(30px, 3vw, 50px);
+    margin-bottom: 20px;
+}
+
+.contenedor-texto-nosotros p{
+    font-family: var(--fuente-secundaria);
+}
+
+span{
+    color: #AC8384;
+    font-weight: bold;
+}
+
+.contenedor-a{
+    padding: 0 12px;
+    transition: all 1s ease;
+}
+
+.contenedor-a a{
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    border: 1px solid #3d3535;
+    color: #111111;
+    font-family: 'Playfair Display', 'Bodoni Moda', Georgia, serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    border-radius: 2px;
+}
+
+.contenedor-a a:hover {
+    background-color: #000000;
+    color: white;
+    transform: translateY(-8px);
+}
+
+.contenedor-a a:active {
+    transform: translateY(0);
+}
+
+@media (min-width:700px){
+    .contenedor-titulo-nosotros h3{
+        transition: all 1s ease;
+        padding: 0 30px;
+    }
+
+    .contenedor-texto-nosotros{
+        transition: all 1s ease;
+        padding: 0 30px;
+    }
+
+    .contenedor-a{
+        transition: all 1s ease;
+        padding: 0 30px;
+        padding-top: 60px;
+    }
+
+}
+
+@media (min-width:900px){
+    .contenedor-titulo-nosotros h3{
+        transition: all 1s ease;
+        padding: 0 40px;
+    }
+
+    .contenedor-texto-nosotros{
+        transition: all 1s ease;
+        padding: 0 40px;
+    }
+
+    .contenedor-a{
+        transition: all 1s ease;
+        padding: 0 40px;
+        padding-top: 12px;
+        padding-top: 70px;
+    }
+}
+
+@media (min-width:1280px){
+    .contenedor-titulo-nosotros h3{
+        transition: all 1s ease;
+        padding: 0 180px;
+    }
+
+    .contenedor-texto-nosotros{
+        transition: all 1s ease;
+        padding: 0 180px;
+    }
+
+    .contenedor-a{
+        transition: all 1s ease;
+        padding: 0 180px;
+        padding-top: 70px;
+    }
+} */
+
+.imagen-seccion-nosotros{
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: all 1s ease;
+    object-position: center bottom;
+}
+
+.contenedor-banner-imagen {
+    position: relative;
+    width: 100%;
+}
+
+.contenedor-titulo-nosotros{
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+}
+
+.contenedor-titulo-nosotros h3{
+    margin-bottom: 5px;
+    padding-left: 12px;
+    transition: all 1s ease;
+}
+
+.contenedor-texto-nosotros{
+    padding: 10px 12px 80px 12px;
+}
+
+.titulo-encima {
+    font-family: var(--fuente-pricncipal);
+    margin-bottom: 20px;
+    color: #000000;
+    padding: 0 12px;
+}
+
+.contenedor-texto-nosotros p{
+    font-family: var(--fuente-secundaria);
+}
+
+span{
+    color: #AC8384;
+    font-weight: bold;
+}
+
+.contenedor-a{
+    padding: 0 12px;
+    transition: all 1s ease;
+}
+
+.contenedor-a a{
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    border: 1px solid #3d3535;
+    color: #111111;
+    font-family: 'Playfair Display', 'Bodoni Moda', Georgia, serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    border-radius: 2px;
+}
+
+.contenedor-a a:hover {
+    background-color: #000000;
+    color: white;
+    transform: translateY(-8px);
+}
+
+.contenedor-a a:active {
+    transform: translateY(0);
+}
+
+@media (min-width:700px){
+    .contenedor-titulo-nosotros h3{
+        transition: all 1s ease;
+        padding: 0 30px;
+    }
+
+    .contenedor-texto-nosotros{
+        transition: all 1s ease;
+        padding: 0 30px;
+    }
+
+    .contenedor-a{
+        transition: all 1s ease;
+        padding: 0 30px;
+        padding-top: 60px;
+    }
+
+    .titulo-encima {
+        padding: 0 30px;
+        top: calc(23%);
+    }
+}
+
+@media (min-width:900px){
+    .contenedor-titulo-nosotros h3{
+        transition: all 1s ease;
+        padding: 0 40px;
+    }
+
+    .contenedor-texto-nosotros{
+        transition: all 1s ease;
+        padding: 0 40px;
+    }
+
+    .contenedor-a{
+        transition: all 1s ease;
+        padding: 0 40px;
+        padding-top: 12px;
+        padding-top: 70px;
+    }
+
+    .titulo-encima {
+        padding: 0 40px;
+    }
+
+    .imagen-seccion-nosotros {
+        object-position: center bottom;
+        max-height: 150px;
+    }
+}
+
+/* MODIFICACIÓN APLICADA ÚNICAMENTE A PARTIR DE 1024PX EN ADELANTE */
+@media (min-width: 1024px){
+    .imagen-seccion-nosotros {
+        max-height: 150px;
+        object-position: center bottom;
+        filter: brightness(0.65); /* Filtro para resaltar el texto blanco */
+        transition: all 1s ease;
+    }
+
+    .titulo-encima {
+        position: absolute;
+        bottom: 20px;
+        left: 40px;
+        color: #ffffff; /* Texto blanco sobre la imagen */
+        margin-bottom: 0;
+        z-index: 2;
+        transition: all 3s ease;
+    }
+
+    .contenedor-titulo-nosotros h3{
+        padding: 0 80px;
+    }
+
+    .contenedor-texto-nosotros{
+        padding: 30px 80px 0 80px;
+    }
+
+    .contenedor-a{
+        padding: 0 80px;
+        padding-top: 40px;
+    }
+}
+
+@media (min-width:1280px){
+    .imagen-seccion-nosotros {
+        max-height: 200px;
+        object-position: center bottom;
+        transition: all 1s ease;
+    }
+
+    .titulo-encima {
+        left: 140px;
+        bottom: 25px;
+    }
+
+    .contenedor-titulo-nosotros h3{
+        transition: all 1s ease;
+        padding: 0 180px;
+    }
+
+    .contenedor-texto-nosotros{
+        transition: all 1s ease;
+        padding: 35px 180px 0 180px;
+    }
+
+    .contenedor-a{
+        transition: all 1s ease;
+        padding: 0 180px;
+        padding-top: 50px;
+    }
+}
+
+@media (min-width:1500px){
+    .imagen-seccion-nosotros {
+        max-height: 250px;
+    }
+}
+
