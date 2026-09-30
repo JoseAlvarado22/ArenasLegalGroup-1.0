@@ -175,7 +175,7 @@ function NosotrosConoceMas() {
             <h4 className="titulo-cta">¿Le ofrecemos la asesoría jurídica que necesita?</h4>
             <p className="subtitulo-cta">Obtenga una evaluación y consulta de su caso</p>
 
-            <a className='boton-agenda-n' href="#contacto">
+            <a className='boton-agenda-n' href="#">
                 AGENDAR ASESORIA
                 <img src={IconoCalendario} alt="Icono de calendario"/>
             </a>
