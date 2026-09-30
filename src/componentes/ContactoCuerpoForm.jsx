@@ -62,8 +62,7 @@ export default function App() {
 
   return (
     <>
-      {}
-      <div className="page-container">
+      <section className="page-container" id='contacto'>
         <form className="form-card" onSubmit={handleSubmit} noValidate>
           
           {/* Nombre completo */}
@@ -162,7 +161,7 @@ export default function App() {
             Enviar <span className="arrow-icon">▷</span>
           </button>
         </form>
-      </div>
+      </section>
 
       {isModalOpen && (
         <div className="modal-overlay" onClick={closeModal}>

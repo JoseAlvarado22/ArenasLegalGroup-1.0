@@ -12,7 +12,7 @@
 /* Form Main Wrapper */
 .form-card {
     background-color: #e9e3e3;
-    padding: 30px 12px ;
+    padding: 50px 12px ;
     border-radius: 4px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     transition: all 1s ease;
@@ -272,7 +272,7 @@
     /* Form Main Wrapper */
     .form-card {
         width: 100%;
-        padding: 40px 180px;
+        padding: 60px 180px;
         transition: all 1s ease;
     }
 

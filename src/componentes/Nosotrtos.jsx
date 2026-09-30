@@ -19,6 +19,7 @@ function Nosotros(){
                         de consultoría y representación judicial caracterizado por la profundidad técnica y 
                         la celeridad procesal.'
                 textoBoton="Conoce mas"
+                rutaDestino="/Sobre-Nosotros"
                 // imagenBoton={iconoFlecha}
             />
 

@@ -30,6 +30,7 @@ p{
     cursor: pointer;
     margin-top: 20px;
     transition: all 1s ease;
+    color: rgb(255, 255, 255);
 }
 
 .boton-agenda:hover {
