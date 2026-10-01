@@ -1,0 +1,45 @@
+.cabecera{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+}
+
+.contenedor-cabecera{
+    height: 40px;
+    transition: all 1s ease;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 50px;
+}
+
+.ALG{
+    height: 80%;
+    /* object-fit: cover; */
+}
+
+.boton-atras {
+    /* position: absolute; */
+    /* left: 0; */
+    background: none;
+    border: none;
+    color: #a38182;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all 1s ease;
+}
+
+.boton-atras:hover{
+    color: #000000;
+    transform: scale(1.3);
+}

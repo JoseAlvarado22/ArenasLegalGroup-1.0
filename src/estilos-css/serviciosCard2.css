@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+.contenedor-defensa-transito {
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 50px;
+}
+
+.banner-titulo-transito {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  min-height: 150px;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.50),
+    rgba(0,0,0,0.50)
+  ),url('../assets/imgCarta2.svg');
+  background-size: cover;
+  background-position: center calc(25%);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+
+.titulo-banner {
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+/* Estilos de Contenido */
+.contenido-transito {
+  padding: 28px 0px 40px 0px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.parrafo-principal {
+  /* font-size: 13.5px; */
+  line-height: 1.55;
+  color: #646464;
+  margin-bottom: 22px;
+  text-align: justify;
+  font-weight: 500;
+  padding: 0px 12px;
+}
+
+.parrafo-secundario {
+  /* font-size: 13.5px; */
+  line-height: 1.5;
+  color: #646464;
+  margin-bottom: 22px;
+  font-weight: 500;
+  padding: 0px 12px;
+}
+
+/* Lista de Servicios */
+.lista-servicios {
+  list-style: none;
+  max-width: 500px;
+  padding: 0;
+  padding: 0px 12px;
+  margin: 20px 0 40px 0;
+  align-self: center;
+}
+
+.lista-servicios li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.punto-negro {
+  font-size: clamp(18px, 3.5vw, 27px);
+  color: #111111;
+  margin-right: 12px;
+  line-height: 1.2;
+}
+
+.lista-servicios p {
+  font-size: clamp(12px, 3vw, 14px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: #646464;
+  margin: 0;
+  text-align: justify;
+}
+
+.lista-servicios strong {
+  font-weight: 700;
+  color: #111111;
+}
+
+.tarjeta-cta{
+  width: 94%;
+  align-self: center;
+}
+
+
+/* Pantallas de Escritorio (Desktop) */
+@media (min-width: 700px) {
+  .banner-titulo-transito {
+    max-height: 200px;
+    padding: 20px 30px;
+  }
+
+  /* Estilos de Contenido */
+  /* .contenido-estatal {
+    padding: 28px 30px 40px 30px;
+  } */
+
+  /* Lista de Servicios */
+  .lista-servicios {
+    max-width: 700px;
+  }
+
+  .lista-servicios p {
+    font-size: clamp(14px, 3vw, 18px);
+    transition: all 1s ease;
+  }
+
+  .parrafo-principal {
+    padding: 0px 30px;
+  }
+
+  .parrafo-secundario {
+    padding: 0px 30px;
+  }
+
+  .lista-servicios {
+    padding: 0px 30px;
+  }
+}
+
+@media (min-width: 900px) {
+  .banner-titulo-transito {
+    padding: 20px 40px;
+  }
+
+  .parrafo-principal {
+    padding: 0px 40px;
+  }
+
+  .parrafo-secundario {
+    padding: 0px 40px;
+  }  
+}
+
+@media (min-width: 1024px) {
+  .banner-titulo-transito {
+    max-height: 280px;
+    padding: 20px 80px;
+  }
+
+  .parrafo-principal {
+    padding: 0px 80px;
+  }
+
+  .parrafo-secundario {
+    padding: 0px 80px;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .banner-titulo-transito {
+    padding: 20px 180px;
+  }
+
+  .parrafo-principal {
+    padding: 0px 180px;
+  }
+
+  .parrafo-secundario {
+    padding: 0px 180px;
+  }
+  
+}

@@ -91,39 +91,24 @@
 
 // export default NosotrosConoceMas;
 
+
+
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // 1. Importamos useNavigate
+// import { useNavigate } from 'react-router-dom'; // 1. Importamos useNavigate
 import '../estilos-css/nosotrosConoceMas.css';
-import logo from '../assets/LogoArenasLegalGroup4.svg';
+// import logo from '../assets/LogoArenasLegalGroup4.svg';
 import Footer from './Footer.jsx';
 import Fotogerente from "../assets/FotoGerente.svg";
-import IconoCalendario from '../assets/IconoCalendario.svg';
+// import IconoCalendario from '../assets/IconoCalendario.svg';
+import TargetaAgendarAsesoria from './TargetaAgendarAsesoria.jsx';
+import CabeceraAtras from './CabeceraAtras.jsx';
 
 function NosotrosConoceMas() {
-  const navigate = useNavigate(); // 2. Inicializamos el hook para la navegación
+  // const navigate = useNavigate(); // 2. Inicializamos el hook para la navegación
 
   return (
     <div className="contenedor-mision-vision">
-
-      <header className='cabecera'>
-        <div className='contenedor-cabecera'>
-            <div className='logo'>
-                {/* 3. Agregamos onClick para regresar a la raíz "/" */}
-                <button 
-                  className="boton-atras" 
-                  aria-label="Volver" 
-                  onClick={() => navigate('/')}
-                >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M14 16l-4-4 4-4"/>
-                    </svg>
-                </button>
-
-                <img className='ALG' src={logo} alt='Logo Arenas Legal Group' />
-            </div>
-        </div>
-      </header>
+      <CabeceraAtras/>
 
       <main className="contenido-principal">
         
@@ -170,16 +155,7 @@ function NosotrosConoceMas() {
             </p>
           </section>
 
-          {/* Tarjeta Call To Action (Agendar Asesoría) */}
-          <section className="tarjeta-cta">
-            <h4 className="titulo-cta">¿Le ofrecemos la asesoría jurídica que necesita?</h4>
-            <p className="subtitulo-cta">Obtenga una evaluación y consulta de su caso</p>
-
-            <a className='boton-agenda-n' href="#">
-                AGENDAR ASESORIA
-                <img src={IconoCalendario} alt="Icono de calendario"/>
-            </a>
-          </section>
+          <TargetaAgendarAsesoria/>
       </div>
 
       <Footer/>

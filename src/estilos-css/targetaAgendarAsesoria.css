@@ -1,0 +1,67 @@
+/* Tarjeta CTA (Agendar Asesoría) */
+.tarjeta-cta {
+    width: 100%;
+    max-width: 350px;
+    border: 2px solid #c9bfc0;
+    border-radius: 2px;
+    padding: 22px 8px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.titulo-cta {
+    text-align: center;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(14px, 3vw, 18px);
+    font-weight: 700;
+    color: #222222;
+    margin: 0 0 8px 0;
+    transition: all 1s ease;
+}
+
+.subtitulo-cta {
+    text-align: center;
+    font-size: clamp(12px, 3vw, 16px);
+    color: #555555;
+    transition: all 1s ease;
+}
+
+.boton-agenda-n {
+    border: solid 1px rgb(0, 0, 0); 
+    background-color: #d5a6a776;
+    width: 70%;
+    border-radius: 2px; 
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+    font-size: clamp(12px, 3vw, 15px);
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 1s ease;
+    font-weight: 600;
+}
+
+.boton-agenda-n:hover {
+    color: #ffffff; 
+    background-color: #00000064;
+    transform: translateY(-8px);
+}
+
+.boton-agenda-n:active {
+    transform: translateY(0);
+}
+
+.contenedor-desplegable-agendar{
+    width: 100vw;
+}

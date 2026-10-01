@@ -8,52 +8,6 @@
     background-color: white;
 }
 
-.cabecera{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: white;
-}
-
-.contenedor-cabecera{
-    height: 40px;
-    transition: all 1s ease;
-}
-
-.logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    gap: 50px;
-}
-
-.ALG{
-    height: 80%;
-    /* object-fit: cover; */
-}
-
-.boton-atras {
-    /* position: absolute; */
-    /* left: 0; */
-    background: none;
-    border: none;
-    color: #a38182;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    transition: all 1s ease;
-}
-
-.boton-atras:hover{
-    color: #000000;
-    transform: scale(1.3);
-}
-
 .contenido-principal{
     width: 100%;
     padding: 50px 12px 0px 12px;
@@ -154,69 +108,6 @@
   transition: all 1s ease;
 }
 
-/* Tarjeta CTA (Agendar Asesoría) */
-.tarjeta-cta {
-    width: 100%;
-    max-width: 350px;
-    border: 2px solid #b6a7a8;
-    border-radius: 2px;
-    padding: 22px 8px;
-    margin-top: 10px;
-    background-color: #ffffff;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all 1s ease;
-}
-
-.titulo-cta {
-    text-align: center;
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(14px, 3vw, 18px);
-    font-weight: 700;
-    color: #222222;
-    margin: 0 0 8px 0;
-    transition: all 1s ease;
-}
-
-.subtitulo-cta {
-    text-align: center;
-    font-size: clamp(12px, 3vw, 16px);
-    color: #555555;
-    transition: all 1s ease;
-}
-
-.boton-agenda-n {
-    border: solid 1px rgb(0, 0, 0); 
-    background-color: #d5a6a776;
-    width: 70%;
-    border-radius: 2px; 
-    max-width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 5px 0;
-    font-size: clamp(12px, 3vw, 15px);
-    cursor: pointer;
-    margin-top: 20px;
-    transition: all 1s ease;
-    font-weight: 600;
-}
-
-.boton-agenda-n:hover {
-    color: #ffffff; 
-    background-color: #00000064;
-    transform: translateY(-8px);
-}
-
-.boton-agenda-n:active {
-    transform: translateY(0);
-}
-
-
 /* Adaptación para pantallas de escritorio (Desktop) */
 @media (min-width: 700px) {
 
@@ -277,7 +168,7 @@
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
     .contenido-principal{
         padding: 50px 80px 0px 80px;
         transition: all 1s ease;
