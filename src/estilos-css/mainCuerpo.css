@@ -1,18 +1,21 @@
-/* span{
-    color: #F2B4B5;
+/* Definición de la animación de entrada */
+.animacion-entrada {
+  opacity: 0;
+  /* transform: translateY(1000px); */
+  animation: subirConOpacidad 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-h1{
-    font-family: var(--fuente-pricncipal);
-    font-weight: 600;
-    font-size: clamp(32px, 3vw, 4px);
+/* Keyframes para controlar el movimiento y la opacidad */
+@keyframes subirConOpacidad {
+  from {
+    opacity: 0;
+    transform: translateY(1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-p{
-    font-family: var(--fuente-secundaria);
-    text-align: justify;
-    font-size: clamp(13px, 3vw, 16px);
-} */
 
 .boton-agenda {
     border: solid 1px white; 

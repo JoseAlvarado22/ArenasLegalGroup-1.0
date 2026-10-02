@@ -18,12 +18,12 @@ function ContactoCuerpo(props){
             <div className='contenedor-iconos-contacto'>
 
                 <div className='contenedor-icono-telefono contenedor-icono'>
-                    <img className='icono-telefono' src={props.imagenTelefono} alt="Icono de telefono"/>
+                    <img className='icono-telefono' src={props.imagenTelefono} alt="Icono de telefono" loading="lazy"/>
                     <p><span>{props.textoTelefono1}</span>{props.textoTelefono2}</p>
                 </div>
 
                 <div className='contenedor-icono-email contenedor-icono'>
-                    <img className='icono-email' src={props.imagenEmail} alt="Icono de email"/>
+                    <img className='icono-email' src={props.imagenEmail} alt="Icono de email" loading="lazy"/>
                     <p><span>{props.textoEmail1}</span>{props.textoEmail2}</p>
                 </div>
 
@@ -33,7 +33,7 @@ function ContactoCuerpo(props){
                 </div>*/}
 
                 <div className='contenedor-icono-atencion contenedor-icono'>
-                    <img className='icono-atencion' src={props.imagenAtencion} alt="Icono de atencion"/>
+                    <img className='icono-atencion' src={props.imagenAtencion} alt="Icono de atencion" loading="lazy"/>
                     <p><span>{props.textoAtencion1}</span>{props.textoAtencion2}</p>
                 </div>
 

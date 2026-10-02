@@ -32,7 +32,7 @@ function ServiciosCuerpo(props){
             <div className='contenedor-titulo-servicios'>
                 <h3>{props.tituloSeccion}</h3>
                 <div className='contenedor-banner-imagen'>
-                    <img className='imagen-seccion-servicios' src={props.imagenSeccion} alt="Imagen de seccion"/>
+                    <img className='imagen-seccion-servicios' src={props.imagenSeccion} alt="Imagen de seccion" loading="lazy"/>
                     <h1 className='titulo-encima'>{props.titulo}</h1>
                 </div>
             </div>

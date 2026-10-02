@@ -29,6 +29,19 @@
     width: 100%;
     height: 100%;
     transition: all 1s ease;
+
+    animation: subirConOpacidad 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes subirConOpacidad {
+  from {
+    opacity: 0;
+    transform: translateY(1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .contenedor-titulo-nosotros h3{

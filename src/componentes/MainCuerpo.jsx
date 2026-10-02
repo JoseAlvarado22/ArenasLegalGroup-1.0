@@ -1,24 +1,20 @@
-import React from 'react'
+import React from 'react';
 import '../estilos-css/mainCuerpo.css';
 
 function MainCuerpo(props){
     return(
         <>
-            <h1>
+            <h1 className="animacion-entrada" style={{ animationDelay: '0.1s' }}>
                 <span>{props.tituloDegradado}</span> {props.tituloNormal}
             </h1>
             
-            <p>
+            <p className="animacion-entrada" style={{ animationDelay: '0.3s' }}>
                 {props.parrafo}
             </p>
             
-            {/* <a className='boton-agenda' href='#contacto'>
-                {props.textoBoton}
-                <img src={props.logoBoton} alt="Icono de calendario"/>
-            </a> */}
-
             <a
-                className='boton-agenda'
+                className="boton-agenda animacion-entrada"
+                style={{ animationDelay: '0.5s' }}
                 href="#contacto"
                 onClick={(e) => {
                     e.preventDefault();
@@ -29,7 +25,7 @@ function MainCuerpo(props){
                 }}
             >
                 {props.textoBoton}
-                <img src={props.logoBoton} alt="Icono de calendario"/>
+                <img src={props.logoBoton} alt="Icono de calendario" loading="lazy"/>
             </a>
         </>
     )

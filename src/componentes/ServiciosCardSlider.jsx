@@ -241,7 +241,7 @@ const ServiciosCardSlider = () => {
                             onClick={() =>  manejarClicCarta(index, carta.ruta)}
                         >
                             <div className="carta-imagen">
-                                <img src={carta.imgCarta} alt={carta.textoCarta} />
+                                <img src={carta.imgCarta} alt={carta.textoCarta} loading="lazy"/>
                             </div>
                             <div className="carta-texto">
                                 <p>{carta.textoCarta}</p>

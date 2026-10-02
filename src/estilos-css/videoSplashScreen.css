@@ -1,0 +1,93 @@
+.contenedor-splash-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #000000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+
+  /* Transición de opacidad fluida */
+  opacity: 1;
+  transition: opacity 1s ease-out, visibility 3s ease-out;
+}
+
+/* Clase que se activa al terminar el video */
+.contenedor-splash-video.desvanecer-salida {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  /* Forzar renderizado fluido por aceleración de hardware */
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+
+  /* Máscara radial para difuminar los 4 bordes hacia el fondo */
+  /* -webkit-mask-image: radial-gradient(circle, black 100%, transparent 100%);
+  mask-image: radial-gradient(circle, black 100%, transparent 100%); */
+}
+
+.video-presentacion {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
+}
+
+/* Botón flotante para omitir */
+.boton-omitir {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.4s ease;
+  z-index: 10000;
+}
+
+.boton-omitir:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.boton-omitir:active {
+  transform: translateY(0);
+}
+
+/* ==========================================
+   ADAPTACIÓN RESPONSIVA (MEDIA QUERIES)
+   ========================================== */
+
+@media (max-width: 768px) {
+  .video-presentacion {
+    object-fit: contain; 
+  }
+
+  .boton-omitir {
+    bottom: 16px;
+    right: 16px;
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+@media (min-aspect-ratio: 21/9) {
+  .video-presentacion {
+    object-fit: cover;
+  }
+}

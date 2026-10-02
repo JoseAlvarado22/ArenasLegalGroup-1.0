@@ -136,6 +136,7 @@ function NosotrosConoceMas() {
             src={Fotogerente} 
             alt="Lina Fernanda Arenas Campo - Gerente General" 
             className="foto-gerente"
+            loading="lazy"
           />
         </div>
         <div className="info-gerente">
