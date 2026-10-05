@@ -1,6 +1,6 @@
 import React from 'react';
-import ServiciosCuerpo from './ServiciosCuerpo';
-import ServiciosCardSlider from './serviciosCardSlider';
+import ServiciosCuerpo from './ServiciosCuerpo.jsx';
+import ServiciosCardSlider from './serviciosCardSlider.jsx';
 import imagenSeccion from '../assets/nuestrosServicios.svg'
 import '../estilos-css/servicios.css'
 
