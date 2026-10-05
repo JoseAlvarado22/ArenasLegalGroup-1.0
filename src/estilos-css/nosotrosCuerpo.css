@@ -1,15 +1,3 @@
-/* .contenedor-seccion-nosotros{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    max-width: 1905px;  
-} */
-
-/* .contenedor-titulo-nosotros h3{
-    justify-self: left;
-} */
-
 .imagen-seccion-nosotros{
     width: 100%;
     height: auto;

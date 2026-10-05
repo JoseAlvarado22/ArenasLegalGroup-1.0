@@ -1,31 +1,3 @@
-/* .imagen-seccion{
-    width: 100%;
-    height: 110px;
-    object-fit: cover;
-    filter: brightness(0.8);
-}
-
-.contenedor-titulo-servicios h3{
-    margin-bottom: 5px;
-    padding-left: 12px;
-}
-
-.contenedor-texto-servicios{
-    padding: 10px 12px 20px 12px;
-}
-
-
-.contenedor-texto-servicios h1{
-    font-family: var(--fuente-pricncipal);
-    font-size: clamp(30px, 3vw, 50px);
-    margin-bottom: 20px;
-}
-
-.contenedor-texto-servicios p{
-    font-family: var(--fuente-secundaria);
-    font-size: clamp(13px, 3vw, 16px);
-} */
-
 .imagen-seccion-servicios{
     width: 100%;
     height: auto;

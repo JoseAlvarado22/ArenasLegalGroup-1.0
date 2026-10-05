@@ -1,27 +1,3 @@
-// import React from 'react';
-// import '../estilos-css/targetaAgendarAsesoria.css';
-// import IconoCalendario from '../assets/IconoCalendario.svg';
-
-// function TargetaAgendarAsesoria() {
-//   return (
-//     <>
-//         Tarjeta Call To Action (Agendar Asesoría)
-//         <section className="tarjeta-cta">
-//             <h4 className="titulo-cta">¿Le ofrecemos la asesoría jurídica que necesita?</h4>
-//             <p className="subtitulo-cta">Obtenga una evaluación y consulta de su caso</p>
-
-//             <a className='boton-agenda-n' href="#">
-//                 AGENDAR ASESORIA
-//                 <img src={IconoCalendario} alt="Icono de calendario"/>
-//             </a>
-//         </section>
-//     </>
-//   );
-// }
-
-// export default TargetaAgendarAsesoria;
-
-
 import React, { useState, useRef, useEffect } from 'react';
 import '../estilos-css/targetaAgendarAsesoria.css';
 import IconoCalendario from '../assets/IconoCalendario.svg';
