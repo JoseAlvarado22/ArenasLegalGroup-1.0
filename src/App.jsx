@@ -113,6 +113,7 @@ import Nosotros from './componentes/Nosotrtos.jsx';
 import Servicios from './componentes/Servicios.jsx';
 import Footer from './componentes/Footer.jsx';
 import NosotrosConoceMas from './componentes/NosotrosConoceMas.jsx';
+import ReseñasSlider from './componentes/ReseñasSlider.jsx';
 
 //componentes de cada servicio
 import ServiciosCard1 from './componentes/ServiciosCard1.jsx';
@@ -122,6 +123,7 @@ import ServiciosCard4 from './componentes/ServiciosCard4.jsx';
 import ServiciosCard5 from './componentes/ServiciosCard5.jsx';
 
 import VideoSplashScreen from './componentes/VideoSplashScreen.jsx';
+import BotonWhatsApp from './componentes/BotonWhatsApp.jsx';
 
 // Reinicia el scroll arriba al cambiar de vista
 function ScrollToTop() {
@@ -141,6 +143,7 @@ function PaginaPrincipal() {
       <Nosotros />
       <Servicios />
       <Contacto />
+      <ReseñasSlider/>
       <Footer />
     </>
   );
@@ -185,6 +188,8 @@ function App() {
                     <Route path="/servicio/derecho-laboral" element={<ServiciosCard4 />} /> {/* Cambiar por el componente 4 */}
                     <Route path="/servicio/defensa-estatal" element={<ServiciosCard5 />} />
                   </Routes>
+
+                  <BotonWhatsApp/>
 
                 </div>
               </HashRouter>

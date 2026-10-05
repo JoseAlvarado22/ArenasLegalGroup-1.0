@@ -22,30 +22,38 @@ function ServiciosCard5() {
         {/* Cuerpos de Texto y Listado */}
         <div className="contenido-estatal">
           <p className="parrafo-principal">
-            Salvaguardamos sus intereses frente a las actuaciones del Estado. Contamos con una amplia experiencia en la representación ante organismos de control, entes reguladores y tribunales administrativos. Nuestra práctica se centra en garantizar que la administración pública actúe bajo los principios de legalidad y debido proceso, defendiéndolo ante sanciones injustas, multas desproporcionadas o actos administrativos que vulneren sus derechos.
+            Nuestra firma brinda asesorías, representación y defensa jurídica en controversias entre 
+            particulares y entidades públicas, así como en la protección de derechos frente a actuaciones, 
+            actos, omisiones y decisiones de la administración Pública.
           </p>
 
           <p className="parrafo-secundario">
-            Brindamos consultoría y defensa técnica en todas las etapas de la relación con el sector público:
+            Alcances de nuestro equipo:          
           </p>
 
           <ul className="lista-servicios">
             <li>
               <span className="punto-negro">•</span>
               <p>
-                <strong>Recursos Administrativos:</strong> Agotamiento de la vía gubernativa (reposición, apelación y queja).
+                <strong>Derechos de petición y reclamaciones administrativas:</strong> Ejercemos la elaboración y seguimiento de solicitudes dirigidas a entidades públicas para obtener el reconocimiento de derechos, información, corrección de actuaciones o respuestas frente a situaciones administrativas.
               </p>
             </li>
             <li>
               <span className="punto-negro">•</span>
               <p>
-                <strong>Responsabilidad del Estado:</strong> Demandas por reparación directa ante perjuicios causados por la administración.
+                <strong>Nulidad y restablecimiento del derecho:</strong> Representación judicial para controvertir actos administrativos de carácter particular que puedan afectar los derechos de una persona, buscando su nulidad y el correspondiente restablecimiento de los derechos vulnerados.
               </p>
             </li>
             <li>
               <span className="punto-negro">•</span>
               <p>
-                <strong>Procesos Sancionatorios:</strong> Defensa ante investigaciones de Superintendencias y entes de vigilancia.
+                <strong>Controversias contractuales con entidades públicas:</strong> Asesoría y representación en conflictos relacionados con contratos celebrados con entidades estatales, incluyendo controversias sobre cumplimiento, incumplimiento, terminación, liquidación y reconocimiento de obligaciones.
+              </p>
+            </li>
+            <li>
+              <span className="punto-negro">•</span>
+              <p>
+                <strong>Defensa frente a actuaciones administrativas:</strong> Asesoría para controvertir decisiones, sanciones, actos administrativos y demás actuaciones de las entidades públicas que puedan afectar los derechos o intereses de los particulares.
               </p>
             </li>
           </ul>

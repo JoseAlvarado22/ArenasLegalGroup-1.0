@@ -17,7 +17,7 @@ function Nosotros(){
                 parrafo3=', entendemos la práctica del derecho como un ejercicio de precisión,
                         ética y actualización constante. Nuestra firma se distingue por ofrecer un servicio 
                         de consultoría y representación judicial caracterizado por la profundidad técnica y 
-                        la celeridad procesal.'
+                        la eficiencia procesal.'
                 textoBoton="Conoce mas"
                 rutaDestino="/Sobre-Nosotros"
                 // imagenBoton={iconoFlecha}

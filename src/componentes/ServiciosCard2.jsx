@@ -27,14 +27,14 @@ function ServiciosCard2() {
           </p>
 
           <p className="parrafo-secundario">
-            ¿Recibió una fotomulta injusta o un comparendo sin pruebas claras? Nuestro servicio de defensa integral le ofrece:
+            ¿Recibió una fotomulta o un comparendo sin pruebas claras? Nuestro servicio de defensa integral le ofrece:
           </p>
 
           <ul className="lista-servicios">
             <li>
               <span className="punto-negro">•</span>
               <p>
-                Descargo y apelación de infracciones detectadas por medios tecnológicos.
+                Deteccion de fallas en el procedimiento sancionatorio.
               </p>
             </li>
             <li>
@@ -58,7 +58,7 @@ function ServiciosCard2() {
             <li>
               <span className="punto-negro">•</span>
               <p>
-                Detección de vicios de nulidad en el procedimiento de notificación.
+                Detección de vicios de nulidad en la notificación.
               </p>
             </li>
           </ul>

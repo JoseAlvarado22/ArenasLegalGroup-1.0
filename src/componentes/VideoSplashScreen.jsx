@@ -1,21 +1,29 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import videoEntrada from '../assets/intro.mp4';
 import '../estilos-css/videoSplashScreen.css';
 
 function VideoSplashScreen({ alFinalizarVideo }) {
+  const videoRef = useRef(null);
   const [desvaneciendo, setDesvaneciendo] = useState(false);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // Ajusta la velocidad de reproducción a 1.5x (El video de 6s pasará a durar 4s)
+      videoRef.current.playbackRate = 3;
+    }
+  }, []);
 
   const iniciarSalida = () => {
     setDesvaneciendo(true);
-    // Espera 600ms (duración de la transición en CSS) antes de avisar a App.jsx
     setTimeout(() => {
       alFinalizarVideo();
-    }, 500);
+    }, 600); // Duración de la transición de opacidad en CSS
   };
 
   return (
     <div className={`contenedor-splash-video ${desvaneciendo ? 'desvanecer-salida' : ''}`}>
       <video
+        ref={videoRef}
         autoPlay
         muted
         playsInline

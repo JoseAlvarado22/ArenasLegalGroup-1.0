@@ -5,7 +5,7 @@ import '../estilos-css/main.css';
 
 function Main(){
     return(
-        <main className='main'>
+        <main className='main' id='inicio'>
             <div className='contenedor-mainCuerpo'>
                 <MainCuerpo
                     tituloDegradado='Soluciones'

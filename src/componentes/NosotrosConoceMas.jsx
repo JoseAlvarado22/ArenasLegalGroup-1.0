@@ -131,16 +131,17 @@ function NosotrosConoceMas() {
 
       {/* Banner Gerente General */}
       <section className="banner-gerente">
-        <div className="contenedor-foto-gerente">
+        {/* <div className="contenedor-foto-gerente">
           <img 
             src={Fotogerente} 
             alt="Lina Fernanda Arenas Campo - Gerente General" 
             className="foto-gerente"
             loading="lazy"
           />
-        </div>
+        </div> */}
         <div className="info-gerente">
           <h3 className="nombre-gerente">Lina Fernanda Arenas Campo</h3>
+          <h4>(Especialista en Derecho Laboral y Seguridad Social)</h4>
           <p className="cargo-gerente">Gerente General</p>
         </div>
       </section>

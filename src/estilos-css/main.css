@@ -54,6 +54,14 @@
 
 }
 
+@media (min-width:1024px){
+    .main{
+        transition: all 1s ease;
+        padding: 0 80px;
+    }
+
+}
+
 @media (min-width:1280px){
     .main{
         transition: all 1s ease;

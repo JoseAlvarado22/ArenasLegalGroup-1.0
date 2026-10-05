@@ -11,6 +11,7 @@ export default function App() {
   });
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
@@ -19,7 +20,7 @@ export default function App() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value,
     }));
-    // Clear error for field being edited
+    
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: null }));
     }
@@ -41,10 +42,36 @@ export default function App() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  // ENVÍO ASÍNCRONO A FORMSPREE
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      setIsModalOpen(true);
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xyezqodn", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          Nombre: formData.fullName,
+          Correo: formData.email,
+          Telefono: formData.phone,
+          Caso: formData.caseDetails,
+          AceptoTerminos: formData.acceptTerms ? 'Sí' : 'No'
+        })
+      });
+
+      if (response.ok) {
+        setIsModalOpen(true);
+      } else {
+        alert("Ocurrió un error al enviar el formulario. Inténtelo de nuevo.");
+      }
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -64,6 +91,8 @@ export default function App() {
     <>
       <section className="page-container" id='contacto'>
         <form className="form-card" onSubmit={handleSubmit} noValidate>
+
+          <h2>Agenda tu Consulta</h2><br/><br/>
           
           {/* Nombre completo */}
           <div className='form-group-1'>
@@ -157,8 +186,8 @@ export default function App() {
           </div>
 
           {/* Botón de Enviar */}
-          <button type="submit" className="submit-btn">
-            Enviar <span className="arrow-icon">▷</span>
+          <button type="submit" className="submit-btn" disabled={isSubmitting}>
+            {isSubmitting ? 'Enviando...' : 'Enviar'} <span className="arrow-icon">▷</span>
           </button>
         </form>
       </section>
@@ -176,10 +205,10 @@ export default function App() {
             </button>
             <div className="modal-content">
               <h3 className="modal-title">
-                Formulario enviado<br />exitosamente!
+                Formulario enviado
               </h3>
               <p className="modal-subtitle">
-                Muchas Gracias por Confiar<br />en Nuestro Equipo.
+                Nuestro Equipo se Comunicara con Usted en Breves Minutos.<br/><br/>Muchas Gracias por Confiar en Nuestro Equipo.
               </p>
             </div>
           </div>

@@ -53,7 +53,7 @@ function TargetaAgendarAsesoria() {
     <>
       {/* Tarjeta Call To Action (Agendar Asesoría) */}
       <section className="tarjeta-cta">
-        <h4 className="titulo-cta">¿Le ofrecemos la asesoría jurídica que necesita?</h4>
+        <h4 className="titulo-cta">Le ofrecemos la asesoría jurídica que necesita</h4>
         <p className="subtitulo-cta">Obtenga una evaluación y consulta de su caso</p>
 
         <a className='boton-agenda-n' href="#" onClick={manejarClicAgendar}>

@@ -27,7 +27,7 @@ function Contacto(){
                 textoDireccion2="Calle 123 Barranquilla, Colombia"} */
                 imagenAtencion={atencion}
                 textoAtencion1="Atención: "
-                textoAtencion2="Lunes a Viernes, 8:00 AM - 6:00 PM"
+                textoAtencion2="Lunes a Viernes de 8:00 AM - 5:00 PM"
 
             />
 

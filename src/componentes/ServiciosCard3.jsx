@@ -22,7 +22,7 @@ function ServiciosCard3() {
         {/* Cuerpos de Texto y Listado */}
         <div className="contenido-bancaria">
           <p className="parrafo-principal">
-            Las normas financieras exige una representación que entienda el lenguaje de los reguladores. Nuestro equipo se especializa 
+            Nuestro equipo se especializa 
             en la gestión de procesos ante la Delegatura para Funciones Jurisdiccionales de la Superintendencia Financiera. Desde la 
             interposición de quejas formales hasta el seguimiento de investigaciones administrativas, garantizamos que su caso sea presentado 
             con el máximo rigor técnico para obtener resoluciones favorables y restaurar el equilibrio en sus relaciones contractuales.
@@ -36,31 +36,31 @@ function ServiciosCard3() {
             <li>
               <span className="punto-negro">•</span>
               <p>
-                <strong>Acciones Jurisdiccionales:</strong> Demandas para la protección del consumidor financiero con la misma validez de una sentencia judicial.
+                <strong>Acciones Jurisdiccionales:</strong> Demandas para la protección del consumidor financiero y resolucion de controversias ante las entidades vigiladas.
               </p>
             </li>
             <li>
               <span className="punto-negro">•</span>
               <p>
-                <strong>Interposición de Quejas:</strong> Gestión técnica de reclamaciones por fallas en el servicio, cobros no autorizados o incumplimiento de contratos.
+                <strong>Interposición de Quejas:</strong> Gestión técnica de reclamaciones por fallas en el servicio, vulneracion de derechos e incumplimiento de obligaciones.
               </p>
             </li>
             <li>
               <span className="punto-negro">•</span>
               <p>
-                <strong>Vigilancia de Prácticas Abusivas:</strong> Denuncia y seguimiento de conductas prohibidas por la Circular Básica Jurídica
+                <strong>Vigilancia de Prácticas Abusivas:</strong> Denuncia y seguimiento de conductas que afectan los derechos de los consumidores financieros.
               </p>
             </li>
-            <li>
+            {/* <li>
               <span className="punto-negro">•</span>
               <p>
                 <strong>Defensa en Procesos Administrativos:</strong> Acompañamiento en investigaciones y requerimientos donde la SFC actúe como autoridad de control.
               </p>
-            </li>
+            </li> */}
             <li>
               <span className="punto-negro">•</span>
               <p>
-                <strong>Conciliación Extrajudicial:</strong> Representación en audiencias para lograr acuerdos efectivos antes de llegar a instancias mayores.
+                <strong>Conciliación Extrajudicial:</strong> Representación en audiencias para lograr acuerdos efectivos antes de iniciar acciones judiciales.
               </p>
             </li>
           </ul>

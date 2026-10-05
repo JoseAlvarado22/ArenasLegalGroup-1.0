@@ -15,7 +15,7 @@ function ServiciosCard1() {
         <div className="banner-titulo-peticion">
           <div className="superposicion-oscura"></div>
           <h1 className="titulo-banner">
-            Derecho de Petición y Acciones de Tutela
+            Derechos de Petición y Acciones de Tutela
           </h1>
         </div>
 
@@ -44,7 +44,7 @@ function ServiciosCard1() {
 
           <p className="parrafo-secundario">
             <span>Acción de Tutela:</span> Es el mecanismo judicial preferente y sumario para la protección inmediata de sus derechos fundamentales 
-            cuando estos se encuentren amenazados o vulnerados por la acción u omisión de cualquier autoridad pública o particulares.
+            cuando estos se encuentren amenazados o vulnerados por la acción u omisión de cualquier persona o autoridad.
           </p>
 
           <ul className="lista-servicios">

@@ -60,7 +60,7 @@
     background: linear-gradient(90deg, #caafb0 0%, #b89899 50%, #8c6e70 100%);
     position: relative;
     margin: 35px 0 25px 0;
-    padding: 0 12px;
+    padding: 20px 12px;
     min-height: 105px;
     overflow: visible;
     gap: 10px;
@@ -104,7 +104,7 @@
   color: #ffffff;
   margin: 0;
   text-align: center;
-  font-size: clamp(12px, 3vw, 22px);
+  font-size: clamp(14px, 3vw, 22px);
   transition: all 1s ease;
 }
 

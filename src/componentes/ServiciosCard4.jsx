@@ -21,20 +21,25 @@ function ServiciosCard4() {
 
         {/* Cuerpos de Texto y Listado */}
         <div className="contenido-laboral">
-            <h3>Profesional y Corporativo</h3>
           <p className="parrafo-principal">
-            Brindamos soluciones integrales para la gestión del talento humano y la mitigación de riesgos legales. Nos especializamos en 
-            blindar la relación empleador-trabajador mediante una asesoría preventiva sólida, auditorías de nómina y representación estratégica 
-            ante entes administrativos y judiciales. Nuestro objetivo es garantizar la continuidad de su negocio bajo el estricto cumplimiento del 
-            Código Sustantivo del Trabajo.
+            Brindamos soluciones integrales en Derecho Laboral y Seguridad Social, dirigida a trabajadores y 
+            empleadores que requieren orientación para prevenir, resolver o gestionar situaciones de su 
+            relación laboral y el acceso a las prestaciones del Sistema de Seguridad Social.
           </p>
 
-          <h3>Protección del Trabajador</h3>
           <p className="parrafo-secundario">
-            Si tus derechos laborales han sido vulnerados, no tienes por qué enfrentar el proceso a solas. Representamos a trabajadores en la 
-            reclamación de acreencias, indemnizaciones por despido injustificado y protección de fueros especiales. Combinamos calidez humana con 
-            una defensa técnica implacable para asegurar que recibas lo que legalmente te corresponde. Tu estabilidad y bienestar son nuestra 
-            prioridad.
+            El servicio comprende el análisis jurídico de cada situación, orientación sobre los derechos y 
+            obligaciones de las partes, reclamaciones y acompañamiento ante las entidades correspondientes 
+            y representación en las actuaciones y procesos que sean necesarios, de acuerdo con las 
+            características de cada caso.
+          </p>
+
+          <p className="parrafo-secundario">
+            Nuestra firma esta enfocada  en brindar una  asesoría laboral preventiva
+            con una orientación jurídica para la correcta aplicación de la legislación laboral y la prevención de conflictos entre  
+            trabajadores y empleadores, ejercemos la representación en procesos judiciales de diferente indole, defendiendo  íntegramente 
+            los derechos laborales de nuestros clientes apuntando siempre a la proteccion y creación de relaciones laborales justas. Brindamos 
+            acompañamiento en la evaluación del caso, identificación de la vía jurídica procedente y preparación de las actuaciones necesarias en cada etapa procesal.
           </p>
 
           <TargetaAgendarAsesoria/>

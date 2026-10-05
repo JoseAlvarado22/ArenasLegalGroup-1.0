@@ -24,6 +24,9 @@
     /* perspective: 1000px; */
     overflow: hidden;
     transition: all 1s ease;
+
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .carta {
