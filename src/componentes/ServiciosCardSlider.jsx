@@ -87,7 +87,6 @@ const ServiciosCardSlider = () => {
             // Si la carta ya está en el centro, navega a su página
             navigate(ruta);
         } else {
-            // Si es una carta lateral, la centra
             setIndiceActual(index);
         }
     };
