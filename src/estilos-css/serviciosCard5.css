@@ -15,7 +15,7 @@
     0deg,
     rgba(0,0,0,0.50),
     rgba(0,0,0,0.50)
-  ),url('../assets/imgCarta5.svg');
+  ),url('../assets/imgCarta5.avif');
   background-size: cover;
   background-position: center calc(25%);
   background-repeat: no-repeat;
@@ -24,17 +24,6 @@
   padding: 20px 12px;
   box-sizing: border-box;
 }
-
-/* Capa de oscurecimiento suave para legibilidad del texto blanco */
-/* .superposicion-oscura {
-  position: absolute;
-  top: -50px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-} */
-
 
 .titulo-banner {
   position: relative;
@@ -124,13 +113,7 @@
     max-height: 200px;
     padding: 20px 30px;
   }
-
-  /* Estilos de Contenido */
-  /* .contenido-estatal {
-    padding: 28px 30px 40px 30px;
-  } */
-
-  /* Lista de Servicios */
+  
   .lista-servicios {
     max-width: 700px;
   }

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import '../estilos-css/serviciosCardSlider.css';
 
-import imgCarta1 from '../assets/imgCarta1.svg';
-import imgCarta2 from '../assets/imgCarta2.svg';
-import imgCarta3 from '../assets/imgCarta3.svg';
-import imgCarta4 from '../assets/imgCarta4.svg';
-import imgCarta5 from '../assets/imgCarta5.svg';
+import imgCarta1 from '../assets/imgCarta1.avif';
+import imgCarta2 from '../assets/imgCarta2.avif';
+import imgCarta3 from '../assets/imgCarta3.avif';
+import imgCarta4 from '../assets/imgCarta4.avif';
+import imgCarta5 from '../assets/imgCarta5.avif';
 
 const cartas = [
     {
@@ -40,6 +40,14 @@ const ServiciosCardSlider = () => {
     const [indiceActual, setIndiceActual] = useState(2);
     const [estaPausado, setEstaPausado] = useState(false);
     const navigate = useNavigate();
+
+    // PRECARGA DE IMÁGENES EN MEMORIA AL INICIAR LA WEB
+    useEffect(() => {
+        cartas.forEach((carta) => {
+            const img = new Image();
+            img.src = carta.imgCarta;
+        });
+    }, []);
 
     const anteriorSlide = () => {
         setIndiceActual((prev) => (prev - 1 + cartas.length) % cartas.length);
@@ -84,7 +92,6 @@ const ServiciosCardSlider = () => {
 
     const manejarClicCarta = (index, ruta) => {
         if (index === indiceActual) {
-            // Si la carta ya está en el centro, navega a su página
             navigate(ruta);
         } else {
             setIndiceActual(index);
@@ -105,10 +112,14 @@ const ServiciosCardSlider = () => {
                             className={`carta ${index === indiceActual ? 'carta-activa' : ''}`} 
                             key={index} 
                             style={getCartaStilo(index)}
-                            onClick={() =>  manejarClicCarta(index, carta.ruta)}
+                            onClick={() => manejarClicCarta(index, carta.ruta)}
                         >
                             <div className="carta-imagen">
-                                <img src={carta.imgCarta} alt={carta.textoCarta} loading="lazy"/>
+                                <img 
+                                    src={carta.imgCarta} 
+                                    alt={carta.textoCarta} 
+                                    decoding="async"
+                                />
                             </div>
                             <div className="carta-texto">
                                 <p>{carta.textoCarta}</p>

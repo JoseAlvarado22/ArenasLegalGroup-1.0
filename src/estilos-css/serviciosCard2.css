@@ -15,7 +15,7 @@
     0deg,
     rgba(0,0,0,0.50),
     rgba(0,0,0,0.50)
-  ),url('../assets/imgCarta2.svg');
+  ),url('../assets/imgCarta2.avif');
   background-size: cover;
   background-position: center calc(25%);
   background-repeat: no-repeat;
@@ -114,12 +114,6 @@
     padding: 20px 30px;
   }
 
-  /* Estilos de Contenido */
-  /* .contenido-estatal {
-    padding: 28px 30px 40px 30px;
-  } */
-
-  /* Lista de Servicios */
   .lista-servicios {
     max-width: 700px;
   }

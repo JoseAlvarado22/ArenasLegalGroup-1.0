@@ -6,6 +6,7 @@
   margin-top: 50px;
 }
 
+
 .banner-titulo-peticion {
   position: relative;
   width: 100%;
@@ -15,7 +16,7 @@
     0deg,
     rgba(0,0,0,0.50),
     rgba(0,0,0,0.50)
-  ),url('../assets/imgCarta1.svg');
+  ),url('../assets/imgCarta1.avif');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -114,12 +115,6 @@
     padding: 20px 30px;
   }
 
-  /* Estilos de Contenido */
-  /* .contenido-estatal {
-    padding: 28px 30px 40px 30px;
-  } */
-
-  /* Lista de Servicios */
   .lista-servicios {
     max-width: 700px;
   }

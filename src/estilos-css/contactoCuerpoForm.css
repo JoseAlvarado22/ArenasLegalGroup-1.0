@@ -106,7 +106,6 @@
     user-select: none;
 }
 
-/* Submit Button with Serif Font */
 .submit-btn {
     width: 100%;
     padding: 12px 20px;
@@ -149,7 +148,6 @@
     display: block;
 }
 
-/* Modal Overlay & Card */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -218,7 +216,6 @@
 }
 
 .modal-subtitle {
-    /* font-size: 18px; */
     font-size: clamp(13px, 3vw, 15px);
     text-align: center;
     font-weight: 500;
@@ -276,7 +273,6 @@
         transition: all 1s ease;
     }
 
-    /* Form Main Wrapper */
     .form-card {
         width: 100%;
         padding: 60px 180px;
