@@ -119,6 +119,7 @@ const ServiciosCardSlider = () => {
                                     src={carta.imgCarta} 
                                     alt={carta.textoCarta} 
                                     decoding="async"
+                                    fetchPriority={index === indiceActual ? "high" : "low"}
                                 />
                             </div>
                             <div className="carta-texto">
