@@ -6,27 +6,28 @@
   animation: movimiento 2s infinite alternate;
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 15px; /* Reducido de 30px para evitar desbordamientos en pantallas pequeñas */
 }
 
-@keyframes movimiento{
-    0%{
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(-30px);
-    }
+@keyframes movimiento {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-12px); /* Disminuido de -30px para evitar tapar contenido o saltos bruscos en móvil */
+  }
 }
 
-/* Enlace principal que agrupa el texto y el botón */
+/* Enlace principal */
 .boton-whatsapp-flotante {
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* Cambiado a center para alinear verticalmente el texto con el círculo */
+  gap: 8px;
   text-decoration: none;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Globo de texto a la izquierda */
+/* Globo de texto */
 .parrafo-flotante {
   background-color: #ffffff;
   color: #333333;
@@ -35,18 +36,16 @@
   font-weight: 500;
   text-align: center;
   border: 1px solid #AC8384;
-  padding: 2px 10px;
+  padding: 4px 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
   white-space: nowrap;
   transition: all 0.3s ease;
 }
 
-/* Círculo del icono de WhatsApp */
+/* Círculo contenedor del icono */
 .circulo-icono-wa {
-    width: 10vw;
-    height: 10vw;
-  max-width: 40px;
-  max-height: 40px;
+  width: 40px;
+  height: 40px;
   background-color: #AC8384;
   color: #ffffff;
   border-radius: 50%;
@@ -56,35 +55,41 @@
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
   flex-shrink: 0;
+  padding: 8px; /* Espaciado interno para ajustar la escala del SVG */
+  box-sizing: border-box;
 }
 
-.boton-inicio {
-    background: none;
-    border: none;
-    color: #a38182;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    transition: all 1s ease;
-    width: 8vw;
-    height: 8vw;
-    max-width: 25px;
-    max-height: 25px;
-}
-
-.boton-inicio:hover{
-    color: #000000;
-    transform: scale(1.15);
-}
-
+/* ESTA ES LA CORRECCIÓN CLAVE PARA MÓVILES */
 .icono-whatsapp {
-  max-width: 33px;
-  max-height: 33px;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
+/* Botón de volver arriba */
+.boton-inicio {
+  background: none;
+  border: none;
+  color: #a38182;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.3s ease;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+}
+
+.boton-inicio:hover {
+  color: #000000;
+  transform: scale(1.15);
+}
+
+/* Estados Hover */
 .boton-whatsapp-flotante:hover {
-  transform: translateY(-2px); /* Eleva ligeramente todo el conjunto */
+  transform: translateY(-2px);
 }
 
 .boton-whatsapp-flotante:hover .parrafo-flotante {
@@ -100,33 +105,29 @@
   box-shadow: 0px 0px 12px #bc0003b0;
 }
 
-@media (min-width:700px){
-    .contenedor-flotante {
-        transition: all 1s ease;
-        right: 30px;
-        bottom: 80px;
-    }
-
+/* Adaptación Responsiva */
+@media (min-width: 700px) {
+  .contenedor-flotante {
+    transition: all 0.5s ease;
+    right: 30px;
+    bottom: 40px;
+  }
 }
 
-@media (min-width:900px){
-    .contenedor-flotante{
-        transition: all 1s ease;
-        right: 40px;
-    }
-
+@media (min-width: 900px) {
+  .contenedor-flotante {
+    right: 40px;
+  }
 }
 
-@media (min-width:1024px){
-    .contenedor-flotante{
-        transition: all 1s ease;
-        right: 80px;
-    }
+@media (min-width: 1024px) {
+  .contenedor-flotante {
+    right: 60px;
+  }
 }
 
-@media (min-width:1280px){
-    .contenedor-flotante{
-        transition: all 1s ease;
-        right: 180px;
-    }
+@media (min-width: 1280px) {
+  .contenedor-flotante {
+    right: 80px; /* Ajustado de 180px para evitar que invada el centro en monitores panorámicos */
+  }
 }
