@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Importamos useNavigate
+import { useNavigate } from "react-router-dom";
 import '../estilos-css/serviciosCardSlider.css';
 
 import imgCarta1 from '../assets/imgCarta1.svg';
