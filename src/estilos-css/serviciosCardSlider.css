@@ -50,7 +50,6 @@
     box-sizing: border-box;
     padding: 8px 6px;
     gap: 10px;
-    /* transition: all 1s ease; */
 }
 
 .carta.carta-activa {
