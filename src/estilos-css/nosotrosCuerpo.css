@@ -238,11 +238,11 @@ span{
   /* overflow-x: hidden; */
 }
 
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   .anim-lateral {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
   }
-}
+} */
 
