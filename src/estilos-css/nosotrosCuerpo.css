@@ -210,6 +210,17 @@ span{
 
 /* ANIMACION DE SECCION */
 /* Estado base con aceleración de hardware para fluidez */
+.desde-derecha,
+.anim-lateral,
+.desde-izquierda,
+.entrada-activa {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  will-change: opacity, transform;
+}
+
 .anim-lateral {
   opacity: 0;
   will-change: transform, opacity;
