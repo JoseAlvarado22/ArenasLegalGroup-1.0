@@ -15,7 +15,7 @@ function ElementoAnimado({ children, className = '', animacion = 'desde-izquierd
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.05 } // activa cuando el 5% del elemento entra en la pantalla
+      { threshold: 0.2 } // activa cuando el 20% del elemento entra en la pantalla
     );
 
     if (ref.current) observer.observe(ref.current);

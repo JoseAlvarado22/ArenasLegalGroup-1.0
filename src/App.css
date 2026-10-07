@@ -72,10 +72,4 @@ a{
         transition: all 1s ease;
     }
 
-    /* h3{
-        font-family: var(--fuente-secundaria);
-        font-size: clamp(16px, 3vw, 26px);
-        transition: all 1s ease;
-    } */
-
 }
