@@ -213,8 +213,8 @@ span{
 .anim-lateral {
   opacity: 0;
   will-change: transform, opacity;
-  transition: opacity 8s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 4s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Posición inicial fuera de pantalla (Izquierda) */

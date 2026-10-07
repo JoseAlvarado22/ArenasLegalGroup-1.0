@@ -134,8 +134,8 @@
   opacity: 0 !important;
   transform: translateY(35px) !important;
   will-change: opacity, transform;
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: opacity 4s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 4s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .animar-entrada .anim-encabezado {
@@ -148,8 +148,8 @@
   opacity: 0 !important;
   transform: scale(0.96) translateY(20px) !important;
   will-change: opacity, transform;
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s,
-              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s !important;
+  transition: opacity 2s cubic-bezier(0.16, 1, 0.3, 1) 0.25s,
+              transform 2s cubic-bezier(0.16, 1, 0.3, 1) 0.25s !important;
 }
 
 .animar-entrada .anim-carrusel {
