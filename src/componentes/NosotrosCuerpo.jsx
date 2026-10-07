@@ -1,29 +1,36 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, sectionRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../estilos-css/nosotrosCuerpo.css';
 
 // Componente auxiliar para observar cada elemento de forma independiente
 function ElementoAnimado({ children, className = '', animacion = 'desde-izquierda' }) {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
+  const ref = sectionRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.2 } // activa cuando el 20% del elemento entra en la pantalla
-    );
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.unobserve(entry.target);
+      }
+    },
+    {
+      // En iOS, 0.01 o 0.05 garantiza la activación inmediata al primer contacto
+      threshold: 0.05, 
+      // rootMargin expande el margen de detección 50px antes de que toque la pantalla
+      rootMargin: "0px 0px 50px 0px"
+    }
+  );
 
-    if (ref.current) observer.observe(ref.current);
+  if (sectionRef.current) {
+    observer.observe(sectionRef.current);
+  }
 
-    return () => {
-      if (ref.current) observer.unobserve(ref.current);
-    };
-  }, []);
+  return () => {
+    if (sectionRef.current) observer.disconnect();
+  };
+}, []);
 
   return (
     <div
