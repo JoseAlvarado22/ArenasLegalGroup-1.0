@@ -220,42 +220,22 @@ span{
 /* Posición inicial fuera de pantalla (Izquierda) */
 .anim-lateral.desde-izquierda {
   transform: translateX(-60px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  will-change: opacity, transform;
 }
 
 /* Posición inicial fuera de pantalla (Derecha) */
 .anim-lateral.desde-derecha {
   transform: translateX(60px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  will-change: opacity, transform;
 }
 
 /* Estado activo cuando entra en el viewport */
 .anim-lateral.entrada-activa {
   opacity: 1;
   transform: translateX(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  will-change: opacity, transform;
 }
 
 /* Evita desbordamiento horizontal en móviles cuando los elementos están fuera */
 .contenedor-seccion-nosotros {
-  overflow-x: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  will-change: opacity, transform;
+  /* overflow-x: hidden; */
 }
 
 @media (prefers-reduced-motion: reduce) {
