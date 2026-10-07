@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../estilos-css/nosotrosCuerpo.css';
 
-// Componente auxiliar optimizado para iOS/Móviles
+// Componente auxiliar para observar cada elemento de forma independiente
 function ElementoAnimado({ children, className = '', animacion = 'desde-izquierda' }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
@@ -15,16 +15,13 @@ function ElementoAnimado({ children, className = '', animacion = 'desde-izquierd
           observer.unobserve(entry.target);
         }
       },
-      { 
-        threshold: 0.05, // Se activa inmediatamente con tocar el 5% del elemento
-        rootMargin: "0px 0px 50px 0px" // Pre-activa la animación 50px antes de entrar
-      } 
+      { threshold: 0.2 } // activa cuando el 20% del elemento entra en la pantalla
     );
 
     if (ref.current) observer.observe(ref.current);
 
     return () => {
-      if (ref.current) observer.disconnect();
+      if (ref.current) observer.unobserve(ref.current);
     };
   }, []);
 
