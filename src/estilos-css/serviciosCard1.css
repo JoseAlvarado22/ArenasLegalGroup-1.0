@@ -42,12 +42,10 @@
   padding: 28px 0px 40px 0px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
 }
 
 .parrafo-principal {
-  /* font-size: 13.5px; */
   line-height: 1.55;
   color: #646464;
   margin-bottom: 22px;
@@ -57,7 +55,6 @@
 }
 
 .parrafo-secundario {
-  /* font-size: 13.5px; */
   line-height: 1.5;
   color: #646464;
   margin-bottom: 22px;
@@ -65,7 +62,6 @@
   padding: 0px 12px;
 }
 
-/* Lista de Servicios */
 .lista-servicios {
   list-style: none;
   max-width: 500px;
@@ -107,8 +103,6 @@
   align-self: center;
 }
 
-
-/* Pantallas de Escritorio (Desktop) */
 @media (min-width: 700px) {
   .banner-titulo-peticion {
     max-height: 200px;

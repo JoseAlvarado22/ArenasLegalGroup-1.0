@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap');
 
-
 .page-container {
     width: 100%;
     max-width: 450px;
@@ -9,7 +8,6 @@
     transition: all 1s ease;
 }
 
-/* Form Main Wrapper */
 .form-card {
     background-color: #e9e3e3;
     padding: 40px 12px ;
@@ -70,7 +68,7 @@
     min-height: 110px;
 }
 
-/* Terms Checkbox Section */
+
 .terms-section {
     margin-top: 24px;
     margin-bottom: 24px;
@@ -310,4 +308,48 @@
         height: 90%;
         transition: all 1s ease;
     }
+}
+
+/* ANIMACION DE SECCION */
+/* Estado inicial oculto */
+.seccion-oculta {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado activo cuando la sección entra en foco */
+.animar-entrada {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Animación escalonada para los elementos internos del formulario */
+.seccion-oculta .anim-hijo-1,
+.seccion-oculta .anim-hijo-2,
+.seccion-oculta .anim-hijo-3,
+.seccion-oculta .anim-hijo-4,
+.seccion-oculta .anim-hijo-5,
+.seccion-oculta .anim-hijo-6 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Tiempos de retraso (stagger) para entrada suave en cascada */
+.animar-entrada .anim-hijo-1 { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.animar-entrada .anim-hijo-2 { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+.animar-entrada .anim-hijo-3 { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+.animar-entrada .anim-hijo-4 { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+.animar-entrada .anim-hijo-5 { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+.animar-entrada .anim-hijo-6 { transition-delay: 0.7s; opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .seccion-oculta,
+  .animar-entrada {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

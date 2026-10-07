@@ -63,3 +63,45 @@
     }
 }
 
+/* ANIMACION DE SECCION */
+/* Definimos la transición en el estado BASE de cada hijo */
+.anim-hijo-1,
+.anim-hijo-2,
+.anim-hijo-3,
+.anim-hijo-4,
+.anim-hijo-5 {
+  opacity: 0 !important;
+  transform: translateY(40px) !important;
+  will-change: opacity, transform;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Cuando la sección principal recibe la clase 'animar-entrada' */
+.animar-entrada .anim-hijo-1,
+.animar-entrada .anim-hijo-2,
+.animar-entrada .anim-hijo-3,
+.animar-entrada .anim-hijo-4,
+.animar-entrada .anim-hijo-5 {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Retardos en cascada (Stagger) para cada elemento */
+.animar-entrada .anim-hijo-1 { transition-delay: 0.1s !important; } /* Título Sección */
+.animar-entrada .anim-hijo-2 { transition-delay: 0.25s !important; } /* Título y Párrafo principal */
+.animar-entrada .anim-hijo-3 { transition-delay: 0.4s !important; } /* Teléfono */
+.animar-entrada .anim-hijo-4 { transition-delay: 0.55s !important; } /* Correo */
+.animar-entrada .anim-hijo-5 { transition-delay: 0.7s !important; } /* Horario */
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-hijo-1,
+  .anim-hijo-2,
+  .anim-hijo-3,
+  .anim-hijo-4,
+  .anim-hijo-5 {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

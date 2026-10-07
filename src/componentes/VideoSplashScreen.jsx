@@ -8,7 +8,6 @@ function VideoSplashScreen({ alFinalizarVideo }) {
 
   useEffect(() => {
     if (videoRef.current) {
-      // Ajusta la velocidad de reproducción a 1.5x (El video de 6s pasará a durar 4s)
       videoRef.current.playbackRate = 3;
     }
   }, []);
@@ -17,7 +16,7 @@ function VideoSplashScreen({ alFinalizarVideo }) {
     setDesvaneciendo(true);
     setTimeout(() => {
       alFinalizarVideo();
-    }, 600); // Duración de la transición de opacidad en CSS
+    }, 600); 
   };
 
   return (

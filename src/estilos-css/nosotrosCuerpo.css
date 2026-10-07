@@ -17,8 +17,6 @@
     width: 100%;
     height: 100%;
     transition: all 1s ease;
-
-    animation: subirConOpacidad 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 @keyframes subirConOpacidad {
@@ -143,12 +141,11 @@ span{
     }
 }
 
-/* MODIFICACIÓN APLICADA ÚNICAMENTE A PARTIR DE 1024PX EN ADELANTE */
 @media (min-width: 1024px){
     .imagen-seccion-nosotros {
         max-height: 150px;
         object-position: center bottom;
-        filter: brightness(0.65); /* Filtro para resaltar el texto blanco */
+        filter: brightness(0.65);
         transition: all 1s ease;
     }
 
@@ -156,7 +153,7 @@ span{
         position: absolute;
         bottom: 20px;
         left: 40px;
-        color: #ffffff; /* Texto blanco sobre la imagen */
+        color: #ffffff;
         margin-bottom: 0;
         z-index: 2;
         transition: all 3s ease;
@@ -209,5 +206,43 @@ span{
     .imagen-seccion-nosotros {
         max-height: 250px;
     }
+}
+
+/* ANIMACION DE SECCION */
+/* Estado base con aceleración de hardware para fluidez */
+.anim-lateral {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Posición inicial fuera de pantalla (Izquierda) */
+.anim-lateral.desde-izquierda {
+  transform: translateX(-60px);
+}
+
+/* Posición inicial fuera de pantalla (Derecha) */
+.anim-lateral.desde-derecha {
+  transform: translateX(60px);
+}
+
+/* Estado activo cuando entra en el viewport */
+.anim-lateral.entrada-activa {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Evita desbordamiento horizontal en móviles cuando los elementos están fuera */
+.contenedor-seccion-nosotros {
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-lateral {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 

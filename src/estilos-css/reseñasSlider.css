@@ -24,13 +24,11 @@
 
 .subtitulo-resenas {
   color: #666666;
-  /* max-width: 600px; */
   margin: 0 auto;
   line-height: 1.5;
   text-align: center;
 }
 
-/* Contenedor con máscara de desvanecimiento a los lados */
 .carrusel-infinito-contenedor {
   width: 100%;
   overflow: hidden;
@@ -42,7 +40,6 @@
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-/* Pista animada que se desplaza de forma continua */
 .carrusel-infinito-pista {
   display: flex;
   gap: 24px;
@@ -50,7 +47,6 @@
   animation: desplazamientoInfinito 30s linear infinite;
 }
 
-/* Pausa la animación al pasar el cursor */
 .carrusel-infinito-contenedor:hover .carrusel-infinito-pista {
   animation-play-state: paused;
 }
@@ -124,5 +120,48 @@
 
   .nombre-cliente {
     font-size: clamp(12px, 3vw, 18px);
+  }
+}
+
+/* Previene desbordamientos durante la animación de entrada */
+.seccion-resenas {
+  overflow: hidden;
+}
+
+/* ANIMACION DE SECCION */
+/* Transición para el encabezado (Entrada desde abajo) */
+.anim-encabezado {
+  opacity: 0 !important;
+  transform: translateY(35px) !important;
+  will-change: opacity, transform;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.animar-entrada .anim-encabezado {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Transición para el carrusel infinito (Escalado suave y desvanecimiento) */
+.anim-carrusel {
+  opacity: 0 !important;
+  transform: scale(0.96) translateY(20px) !important;
+  will-change: opacity, transform;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s,
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s !important;
+}
+
+.animar-entrada .anim-carrusel {
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-encabezado,
+  .anim-carrusel {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

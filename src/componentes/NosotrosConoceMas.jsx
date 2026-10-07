@@ -1,15 +1,11 @@
 import React from 'react';
-// import { useNavigate } from 'react-router-dom'; // 1. Importamos useNavigate
 import '../estilos-css/nosotrosConoceMas.css';
-// import logo from '../assets/LogoArenasLegalGroup4.svg';
 import Footer from './Footer.jsx';
 import Fotogerente from "../assets/FotoGerente.svg";
-// import IconoCalendario from '../assets/IconoCalendario.svg';
 import TargetaAgendarAsesoria from './TargetaAgendarAsesoria.jsx';
 import CabeceraAtras from './CabeceraAtras.jsx';
 
 function NosotrosConoceMas() {
-  // const navigate = useNavigate(); // 2. Inicializamos el hook para la navegación
 
   return (
     <div className="contenedor-mision-vision">

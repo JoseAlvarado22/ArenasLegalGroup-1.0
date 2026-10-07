@@ -36,7 +36,6 @@
   letter-spacing: 0.2px;
 }
 
-/* Estilos de Contenido */
 .contenido-transito {
   padding: 28px 0px 40px 0px;
   display: flex;
@@ -46,7 +45,6 @@
 }
 
 .parrafo-principal {
-  /* font-size: 13.5px; */
   line-height: 1.55;
   color: #646464;
   margin-bottom: 22px;
@@ -64,7 +62,6 @@
   padding: 0px 12px;
 }
 
-/* Lista de Servicios */
 .lista-servicios {
   list-style: none;
   max-width: 500px;
@@ -107,7 +104,6 @@
 }
 
 
-/* Pantallas de Escritorio (Desktop) */
 @media (min-width: 700px) {
   .banner-titulo-transito {
     max-height: 200px;

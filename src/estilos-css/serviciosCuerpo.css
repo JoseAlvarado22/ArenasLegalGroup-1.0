@@ -78,12 +78,10 @@
     }
 }
 
-/* MODIFICACIÓN APLICADA ÚNICAMENTE A PARTIR DE 1024PX EN ADELANTE */
 @media (min-width: 1024px){
     .imagen-seccion-servicios {
         max-height: 150px;
-        /* object-position: center bottom; */
-        filter: brightness(0.65); /* Filtro para resaltar el texto blanco */
+        filter: brightness(0.65);
         transition: all 1s ease;
     }
 
@@ -91,7 +89,7 @@
         position: absolute;
         bottom: 20px;
         left: 40px;
-        color: #ffffff; /* Texto blanco sobre la imagen */
+        color: #ffffff; 
         margin-bottom: 0;
         z-index: 2;
         transition: all 3s ease;
@@ -110,7 +108,6 @@
 @media (min-width:1280px){
     .imagen-seccion-servicios {
         max-height: 200px;
-        /* object-position: center bottom; */
     }
 
     .titulo-encima {
@@ -134,5 +131,43 @@
     .imagen-seccion-servicios {
         max-height: 250px;
     }
+}
+
+/* ANIMACION DE SECCION */
+/* Previene scrollbar horizontal cuando los elementos están fuera del viewport */
+.contenedor-seccion-servicios {
+  overflow-x: hidden;
+}
+
+/* Transición optimizada */
+.anim-lateral {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Entrada desde la Izquierda */
+.anim-lateral.desde-izquierda {
+  transform: translateX(-50px);
+}
+
+/* Entrada desde la Derecha */
+.anim-lateral.desde-derecha {
+  transform: translateX(50px);
+}
+
+/* Estado activo cuando el elemento está enfocado */
+.anim-lateral.entrada-activa {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-lateral {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import '../estilos-css/serviciosCardSlider.css';
 
@@ -39,7 +39,32 @@ const cartas = [
 const ServiciosCardSlider = () => {
     const [indiceActual, setIndiceActual] = useState(2);
     const [estaPausado, setEstaPausado] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+    const sliderRef = useRef(null);
     const navigate = useNavigate();
+
+    // INTERSECTION OBSERVER PARA DETECTAR EL FOCO DE SCROLL
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target); // Solo se activa la primera vez que entra a pantalla
+                }
+            },
+            { threshold: 0.15 } // activa cuando el 15% del componente entra en pantalla
+        );
+
+        if (sliderRef.current) {
+            observer.observe(sliderRef.current);
+        }
+
+        return () => {
+            if (sliderRef.current) {
+                observer.unobserve(sliderRef.current);
+            }
+        };
+    }, []);
 
     // PRECARGA DE IMÁGENES EN MEMORIA AL INICIAR LA WEB
     useEffect(() => {
@@ -66,6 +91,7 @@ const ServiciosCardSlider = () => {
         return () => clearInterval(timer);
     }, [estaPausado, indiceActual]);
 
+    // LÓGICA DE ESTILOS DEL CARRUSEL ORIGINAL (INTACTA)
     const getCartaStilo = (index) => {
         const total = cartas.length;
         let posRelativa = index - indiceActual;
@@ -99,7 +125,10 @@ const ServiciosCardSlider = () => {
     };
 
     return (
-        <div className="servicios-carta-slider">
+        <div 
+            ref={sliderRef}
+            className={`servicios-carta-slider ${isVisible ? 'animar-entrada' : 'seccion-oculta'}`}
+        >
             <div 
                 className="servicios-carta-slider-contenedor"
                 onMouseEnter={() => setEstaPausado(true)}

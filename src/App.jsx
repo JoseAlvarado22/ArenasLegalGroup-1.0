@@ -69,10 +69,10 @@ function App() {
 
 
                     {/* Rutas para los 5 Servicios */}
-                    <Route path="/servicio/peticion-y-tutelas" element={<ServiciosCard1 />} /> {/* Cambiar por el componente 1 cuando lo tengas */}
-                    <Route path="/servicio/infracciones-transito" element={<ServiciosCard2 />} /> {/* Cambiar por el componente 2 */}
-                    <Route path="/servicio/reclamaciones-bancarias" element={<ServiciosCard3 />} /> {/* Cambiar por el componente 3 */}
-                    <Route path="/servicio/derecho-laboral" element={<ServiciosCard4 />} /> {/* Cambiar por el componente 4 */}
+                    <Route path="/servicio/peticion-y-tutelas" element={<ServiciosCard1 />} /> 
+                    <Route path="/servicio/infracciones-transito" element={<ServiciosCard2 />} /> 
+                    <Route path="/servicio/reclamaciones-bancarias" element={<ServiciosCard3 />} /> 
+                    <Route path="/servicio/derecho-laboral" element={<ServiciosCard4 />} /> 
                     <Route path="/servicio/defensa-estatal" element={<ServiciosCard5 />} />
                   </Routes>
 

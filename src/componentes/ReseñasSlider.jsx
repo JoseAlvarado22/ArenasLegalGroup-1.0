@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../estilos-css/reseñasSlider.css';
 
 const resenas = [
@@ -35,20 +35,51 @@ const resenas = [
 ];
 
 function ResenasSlider() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  // INTERSECTION OBSERVER PARA DETECTAR EL FOCO DE SCROLL
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target); // activa una sola vez al entrar en pantalla
+        }
+      },
+      {
+        threshold: 0.15, //activa cuando el 15% de la sección es visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   // Función para renderizar las estrellas de calificación
   const renderEstrellas = (cant) => {
     return "★".repeat(cant) + "☆".repeat(5 - cant);
   };
 
   return (
-    <section className="seccion-resenas">
-      <div className="encabezado-resenas">
+    <section 
+      ref={sectionRef}
+      className={`seccion-resenas ${isVisible ? 'animar-entrada' : 'seccion-oculta'}`}
+    >
+      <div className="encabezado-resenas anim-encabezado">
         <h2 className="titulo-resenas">Valoraciones de nuestros clientes</h2>
         <p className="subtitulo-resenas">La confianza y satisfacción de quienes representamos son nuestro mayor respaldo.</p>
       </div>
 
       {/* Cintas enmascaradas para movimiento infinito */}
-      <div className="carrusel-infinito-contenedor">
+      <div className="carrusel-infinito-contenedor anim-carrusel">
         <div className="carrusel-infinito-pista">
           {/* Se duplica el arreglo para garantizar el bucle continuo sin saltos */}
           {[...resenas, ...resenas].map((item, index) => (

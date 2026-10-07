@@ -13,13 +13,10 @@
   justify-content: center;
   overflow: hidden;
   user-select: none;
-
-  /* Transición de opacidad fluida */
   opacity: 1;
   transition: opacity 1s ease-out, visibility 3s ease-out;
 }
 
-/* Clase que se activa al terminar el video */
 .contenedor-splash-video.desvanecer-salida {
   opacity: 0;
   visibility: hidden;
@@ -41,7 +38,6 @@
   object-position: center;
 }
 
-/* Botón flotante para omitir */
 .boton-omitir {
   position: absolute;
   bottom: 24px;
@@ -68,10 +64,6 @@
 .boton-omitir:active {
   transform: translateY(0);
 }
-
-/* ==========================================
-   ADAPTACIÓN RESPONSIVA (MEDIA QUERIES)
-   ========================================== */
 
 @media (max-width: 768px) {
   .video-presentacion {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../estilos-css/contactoCuerpoForm.css';
 
 export default function App() {
@@ -13,6 +13,35 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
+  
+  // Estado y Referencia para la animación al hacer scroll
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          // Detener observación, se anima la primera vez
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.15, // activa cuando el 15% de la sección es visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -42,7 +71,6 @@ export default function App() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // ENVÍO ASÍNCRONO A FORMSPREE
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -89,15 +117,19 @@ export default function App() {
 
   return (
     <>
-      <section className="page-container" id='contacto'>
+      <section 
+        className={`page-container ${isVisible ? 'animar-entrada' : 'seccion-oculta'}`} 
+        id="contacto"
+        ref={sectionRef}
+      >
         <form className="form-card" onSubmit={handleSubmit} noValidate>
 
           <h2>Agenda tu Consulta</h2><br/><br/>
           
           {/* Nombre completo */}
-          <div className='form-group-1'>
-            <div className='form-group-2'>
-              <div className="form-group">
+          <div className="form-group-1">
+            <div className="form-group-2">
+              <div className="form-group anim-hijo-1">
                 <label className="form-label" htmlFor="fullName">
                   Nombre completo <span className="asterisk">*</span>
                 </label>
@@ -114,7 +146,7 @@ export default function App() {
               </div>
 
               {/* Correo Electrónico */}
-              <div className="form-group">
+              <div className="form-group anim-hijo-2">
                 <label className="form-label" htmlFor="email">
                   Correo Electrónico <span className="asterisk">*</span>
                 </label>
@@ -131,7 +163,7 @@ export default function App() {
               </div>
 
               {/* Teléfono Celular */}
-              <div className="form-group">
+              <div className="form-group anim-hijo-3">
                 <label className="form-label" htmlFor="phone">
                   Teléfono Celular <span className="asterisk">*</span>
                 </label>
@@ -149,7 +181,7 @@ export default function App() {
             </div>
 
             {/* Cuéntanos tu Caso */}
-            <div className="form-group form-group-2">
+            <div className="form-group form-group-2 anim-hijo-4">
               <label className="form-label" htmlFor="caseDetails">
                 Cuéntanos tu Caso <span className="asterisk">*</span>
               </label>
@@ -166,7 +198,7 @@ export default function App() {
           </div>
 
           {/* Términos y condiciones */}
-          <div className="terms-section">
+          <div className="terms-section anim-hijo-5">
             <span className="terms-title">
               Uso y tratamiento de datos personales <span className="asterisk">*</span>
             </span>
@@ -186,7 +218,7 @@ export default function App() {
           </div>
 
           {/* Botón de Enviar */}
-          <button type="submit" className="submit-btn" disabled={isSubmitting}>
+          <button type="submit" className="submit-btn anim-hijo-6" disabled={isSubmitting}>
             {isSubmitting ? 'Enviando...' : 'Enviar'} <span className="arrow-icon">▷</span>
           </button>
         </form>

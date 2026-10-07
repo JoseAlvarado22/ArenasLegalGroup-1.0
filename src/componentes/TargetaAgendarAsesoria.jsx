@@ -11,11 +11,11 @@ function TargetaAgendarAsesoria() {
   const formularioRef = useRef(null);
 
   const manejarClicAgendar = (e) => {
-    e.preventDefault(); // Evita que la página recargue o salte al presionar el enlace
-    setMostrarFormulario(!mostrarFormulario); // Alterna la visibilidad (mostrar/ocultar)
+    e.preventDefault(); 
+    setMostrarFormulario(!mostrarFormulario); 
   };
 
-  // Efecto que realiza el scroll suave cuando mostrarFormulario pasa a ser true
+
   useEffect(() => {
     if (mostrarFormulario && formularioRef.current) {
       formularioRef.current.scrollIntoView({ 
@@ -27,7 +27,6 @@ function TargetaAgendarAsesoria() {
 
   return (
     <>
-      {/* Tarjeta Call To Action (Agendar Asesoría) */}
       <section className="tarjeta-cta">
         <h4 className="titulo-cta">Le ofrecemos la asesoría jurídica que necesita</h4>
         <p className="subtitulo-cta">Obtenga una evaluación y consulta de su caso</p>
@@ -38,7 +37,6 @@ function TargetaAgendarAsesoria() {
         </a>
       </section>
 
-      {/* elemento renderizado al dar clic en la etiqueta <a> */}
       {mostrarFormulario && (
         <div className="contenedor-desplegable-agendar" ref={formularioRef}>
           <ContactoCuerpoForm/>

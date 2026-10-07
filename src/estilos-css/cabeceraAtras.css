@@ -22,12 +22,9 @@
 
 .ALG{
     height: 80%;
-    /* object-fit: cover; */
 }
 
 .boton-atras {
-    /* position: absolute; */
-    /* left: 0; */
     background: none;
     border: none;
     color: #a38182;
