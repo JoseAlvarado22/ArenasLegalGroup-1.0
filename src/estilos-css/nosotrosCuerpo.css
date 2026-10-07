@@ -209,46 +209,51 @@ span{
 }
 
 /* ANIMACION DE SECCION */
-/* Estado base con aceleración de hardware para fluidez */
-.desde-derecha,
-.anim-lateral,
-.desde-izquierda,
-.entrada-activa {
+/* Contenedor padre con manejo de overflow */
+.contenedor-seccion-nosotros {
+  overflow-x: hidden;
+}
+
+/* Estado base con aceleración WebKit por Hardware */
+.anim-lateral {
+  opacity: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  will-change: opacity, transform;
-}
-
-.anim-lateral {
-  opacity: 0;
   will-change: transform, opacity;
-  transition: opacity 8s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 8s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Corregido a 0.8s para una animación fluida y visible */
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 /* Posición inicial fuera de pantalla (Izquierda) */
 .anim-lateral.desde-izquierda {
-  transform: translateX(-60px);
+  transform: translate3d(-40px, 0, 0);
 }
 
 /* Posición inicial fuera de pantalla (Derecha) */
 .anim-lateral.desde-derecha {
-  transform: translateX(60px);
+  transform: translate3d(40px, 0, 0);
 }
 
 /* Estado activo cuando entra en el viewport */
 .anim-lateral.entrada-activa {
-  opacity: 1;
-  transform: translateX(0);
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) !important;
 }
 
-/* Evita desbordamiento horizontal en móviles cuando los elementos están fuera */
-.contenedor-seccion-nosotros {
-  /* overflow-x: hidden; */
+/* En pantallas móviles reducemos el rango de desplazamiento para evitar bloqueos */
+@media (max-width: 768px) {
+  .anim-lateral.desde-izquierda {
+    transform: translate3d(-20px, 0, 0);
+  }
+  .anim-lateral.desde-derecha {
+    transform: translate3d(20px, 0, 0);
+  }
 }
 
+/* Accesibilidad */
 @media (prefers-reduced-motion: reduce) {
   .anim-lateral {
     opacity: 1 !important;
