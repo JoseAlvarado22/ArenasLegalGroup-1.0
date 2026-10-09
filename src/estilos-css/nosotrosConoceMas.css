@@ -108,6 +108,33 @@
   transition: all 1s ease;
 }
 
+.vista-nosotros-conocemas {
+  opacity: 0;
+  transform: translateY(12px);
+  filter: blur(5px); /* Difuminado inicial de entrada */
+  will-change: opacity, transform, filter;
+  transition: opacity 2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 3s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Estado activo cuando la vista se monta por completo */
+.vista-nosotros-conocemas.entrada-sua {
+  opacity: 1;
+  transform: translateY(0px);
+  filter: blur(0px);
+}
+
+/* Accesibilidad para movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .vista-nosotros-conocemas {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
+
 @media (min-width: 700px) {
 
     .contenedor-cabecera{

@@ -23,7 +23,7 @@ function NosotrosConoceMas() {
 
   return (
 
-    <div className={`vista-nosotros-conocemas ${cargado ? 'entrada-suave' : ''}`}>
+    <div className={`vista-nosotros-conocemas ${cargado ? 'entrada-sua' : ''}`}>
       <div className="contenedor-mision-vision">
         <CabeceraAtras/>
 
