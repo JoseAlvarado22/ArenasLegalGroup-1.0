@@ -6,7 +6,8 @@
   height: 100vh;
   width: 100dvw;
   height: 100dvh;
-  background: linear-gradient(90deg, #e8e6e6 0%, #f2f2f2 50%, #e8e6e6 100%);
+  /* background: linear-gradient(90deg, #e8e6e6 0%, #f2f2f2 50%, #e8e6e6 100%); */
+  background-color: #ffffff;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -27,12 +28,6 @@
   -webkit-backface-visibility: hidden;
   transition: all 1s ease;
 
-  /* Máscara radial para difuminar los 4 bordes hacia el fondo */
-  /* -webkit-mask-image: radial-gradient(circle, black 100%, transparent 100%);
-  mask-image: radial-gradient(circle, black 100%, transparent 100%); */
-
-  /* -webkit-mask-image: radial-gradient( rgba(21, 21, 21, 0) 60%, rgba(14, 13, 13, 0) 100%);
-  mask-image: radial-gradient(rgb(13, 13, 13) 60%, rgba(21, 20, 20, 0) 100%); */
 }
 
 .video-presentacion {
@@ -47,9 +42,6 @@
   /* Difuminado suave en los 4 bordes */
   -webkit-mask-image: radial-gradient(ellipse 50% 40% at center, rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%);
   mask-image: radial-gradient(ellipse 50% 40% at center,rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%);
-
-  /* -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
-  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.522) 60%, rgba(0, 0, 0, 0) 100%); */
 }
 
 .boton-omitir {
@@ -73,6 +65,8 @@
 .boton-omitir:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
+  color: #0000009f;
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .boton-omitir:active {

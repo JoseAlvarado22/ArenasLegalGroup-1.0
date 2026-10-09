@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../estilos-css/serviciosCard2.css';
 import TargetaAgendarAsesoria from './TargetaAgendarAsesoria';
 import Footer from './Footer';
 import CabeceraAtras from './CabeceraAtras';
 
 function ServiciosCard2() {
+    const [cargado, setCargado] = useState(false);
+  
+    // EFECTO PARA DISPARAR LA ENTRADA SUAVE AL MONTAR LA RUTA
+    useEffect(() => {
+      // Scroll al inicio de la página inmediatamente al cambiar de ruta
+      window.scrollTo(0, 0);
+  
+      // Activa la animación de entrada
+      const timer = setTimeout(() => {
+        setCargado(true);
+      }, 50);
+  
+      return () => clearTimeout(timer);
+    }, []);
+
   return (
-    <>
+    <div className={`vista-servicio-transicion ${cargado ? 'entrada-suave' : ''}`}>
 
       <CabeceraAtras/>
 
@@ -67,7 +82,7 @@ function ServiciosCard2() {
         </div>
       </div>
       <Footer/>
-    </>
+    </div>
   );
 }
 
