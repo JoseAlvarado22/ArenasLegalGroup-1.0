@@ -25,6 +25,7 @@
   /* Forzar renderizado fluido por aceleración de hardware */
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
+  transition: all 1s ease;
 
   /* Máscara radial para difuminar los 4 bordes hacia el fondo */
   /* -webkit-mask-image: radial-gradient(circle, black 100%, transparent 100%);
