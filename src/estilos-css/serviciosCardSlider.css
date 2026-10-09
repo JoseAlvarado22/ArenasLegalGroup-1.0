@@ -11,7 +11,7 @@
 /* Estado activo cuando la vista se monta por completo */
 .vista-nosotros-conocemas.entrada-suave {
   opacity: 1;
-  transform: translateY(-50px);
+  transform: translateY(0px);
   filter: blur(0px);
 }
 
