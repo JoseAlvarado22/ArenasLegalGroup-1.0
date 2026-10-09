@@ -1,4 +1,4 @@
-.vista-servicio-transicion {
+.vista-nosotros-conocemas {
   opacity: 0;
   transform: translateY(12px);
   filter: blur(5px); /* Difuminado inicial de entrada */
@@ -9,7 +9,7 @@
 }
 
 /* Estado activo cuando la vista se monta por completo */
-.vista-servicio-transicion.entrada-suave {
+.vista-nosotros-conocemas.entrada-suave {
   opacity: 1;
   transform: translateY(-50px);
   filter: blur(0px);
@@ -17,7 +17,7 @@
 
 /* Accesibilidad para movimiento reducido */
 @media (prefers-reduced-motion: reduce) {
-  .vista-servicio-transicion {
+  .vista-nosotros-conocemas {
     opacity: 1 !important;
     transform: none !important;
     filter: none !important;
