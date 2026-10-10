@@ -8,7 +8,7 @@ function VideoSplashScreen({ alFinalizarVideo }) {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 1;
+      videoRef.current.playbackRate = 2;
     }
   }, []);
 
