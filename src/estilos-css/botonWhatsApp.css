@@ -75,13 +75,16 @@
   width: 25px;
   height: 25px;
   flex-shrink: 0;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
 }
 
 .boton-inicio:hover {
   color: #000000;
   transform: scale(1.15);
+}
+
+.boton-inicio-flotante{
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 

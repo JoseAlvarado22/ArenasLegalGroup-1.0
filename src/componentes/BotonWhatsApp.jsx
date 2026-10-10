@@ -31,6 +31,7 @@ function BotonWhatsApp() {
       </a>
 
       <a
+      className="boton-inicio-flotante"
         href="#inicio"
         onClick={(e) => {
           e.preventDefault();
