@@ -75,6 +75,8 @@
   width: 25px;
   height: 25px;
   flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 .boton-inicio:hover {
