@@ -21,8 +21,12 @@ function ServiciosCard1() {
   }, []);
 
   return (
+
+    <>
+    <CabeceraAtras />
+    
     <div className={`vista-servicio-transicion ${cargado ? 'entrada-suave' : ''}`}>
-      <CabeceraAtras />
+      
 
       <div className="contenedor-derecho-peticion">
         
@@ -77,6 +81,7 @@ function ServiciosCard1() {
       </div>
       <Footer />
     </div>
+    </>
   );
 }
 

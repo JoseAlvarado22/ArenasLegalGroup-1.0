@@ -11,7 +11,7 @@
 /* Estado activo cuando la vista se monta por completo */
 .vista-servicio-transicion.entrada-suave {
   opacity: 1;
-  transform: translateY(-50px);
+  transform: translateY(-10px);
   filter: blur(0px);
 }
 

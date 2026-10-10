@@ -6,7 +6,7 @@ const resenas = [
     id: 1,
     nombre: "Carlos Mendoza",
     calificacion: 4,
-    comentario: "Excelente acompañamiento en mi proceso administrativo, su equipo demostró un alto nivel de ética y profesionalismo en todo momento."
+    comentario: "Excelente acompañamiento en mi proceso, su equipo demostró un alto nivel de ética y profesionalismo en todo momento."
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const resenas = [
     id: 3,
     nombre: "Jorge Silva",
     calificacion: 4,
-    comentario: "Gracias a Arenas Legal Group logramos por su acompañamiento en la solucion de mi caso, su estrategia jurídica fue impecable."
+    comentario: "Gracias a Arenas Legal Group por su acompañamiento en la solucion de mi caso, su estrategia jurídica fue impecable."
   },
   {
     id: 4,

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import videoEntrada from '../assets/intro2.mp4';
+import videoEntrada from '../assets/intro.mp4';
 import '../estilos-css/videoSplashScreen.css';
 
 function VideoSplashScreen({ alFinalizarVideo }) {
