@@ -1,6 +1,6 @@
 import React from 'react';
 import '../estilos-css/footer.css';
-import logo from '../assets/LogoArenasLegalGroup4.svg';
+import logo from '../assets/LogoArenasLegalGroup4.avif';
 
 export default function Footer() {
   return (
