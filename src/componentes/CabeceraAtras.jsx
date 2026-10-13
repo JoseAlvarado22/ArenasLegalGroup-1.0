@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import '../estilos-css/cabeceraAtras.css';
-import logo from '../assets/LogoArenasLegalGroup4.svg';
+import logo from '../assets/LogoArenasLegalGroup4.avif';
 
 function CabeceraAtras() {
   const navigate = useNavigate(); 

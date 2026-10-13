@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/LogoArenasLegalGroup4.svg';
+import logo from '../assets/LogoArenasLegalGroup4.avif';
 import '../estilos-css/cabecera.css';
 
 function Cabecera(){
