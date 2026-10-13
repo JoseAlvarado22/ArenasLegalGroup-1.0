@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../estilos-css/nosotrosConoceMas.css';
 import Footer from './Footer.jsx';
-import Fotogerente from "../assets/FotoGerente.svg";
+// import Fotogerente from "../assets/FotoGerente.svg";
 import TargetaAgendarAsesoria from './TargetaAgendarAsesoria.jsx';
 import CabeceraAtras from './CabeceraAtras.jsx';
 
